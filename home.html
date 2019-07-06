@@ -1,0 +1,3176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://rubygarage.org/blog/most-basic-git-commands-with-examples -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/inferredEvents.js.download" async=""></script><script src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/328927571074126" async=""></script><script async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/fbevents.js.download"></script><script async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/qevents.js.download"></script><script type="text/javascript" async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/w.js.download"></script><script type="text/javascript" async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/f.txt"></script><script type="text/javascript" async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/4065.js.download"></script><script type="text/javascript" async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/analytics.js.download"></script><script async="" src="https://www.linkedin.com/countserv/count/share?url=https://rubygarage.org/blog/most-basic-git-commands-with-examples&amp;callback=jQuery1124011352839035992868_1562404854650&amp;_=1562404854651"></script>
+
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<link rel="amphtml" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples.amp">
+<link href="https://rubygarage.org/blog/most-basic-git-commands-with-examples" rel="canonical">
+<link rel="stylesheet" media="all" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/application-ef75f06c64f56259e79a071b663053606a99ea53a7258e11efeb1aceb257b0bc.css" recursive="true" cache="true" async="async">
+<meta content="https://rubygarage.org/blog/most-basic-git-commands-with-examples" property="og:url">
+<meta name="description" content="To learn Git and its most basic commands, you’ll need something better than a simple Git cheat sheet. The following article breaks down Git concepts for you.">
+<title>
+Basic Git Commands With Examples "git add . or git add -A" [Git Cheat Sheet]
+</title>
+<meta content="article" property="og:type">
+<meta content="Most Basic Git Commands with Examples" property="og:title">
+<meta content="Git is a great tool that is, unfortunately, very difficult to grasp. To get started, you’ll need to familiarize yourself with the most basic Git commands; after you learn these basic commands, Git will become your best friend." property="og:description">
+<meta content="git, git command, git commands, basic git commands, git commands with examples, git add ., " name="keywords">
+<meta content="summary_large_image" name="twitter:card">
+
+<meta content="https://rubygarage.s3.amazonaws.com/uploads/article/image_with_background/163/most-basic-git-commands-with-examples.png" property="og:image">
+<meta content="https://rubygarage.s3.amazonaws.com/uploads/article/image_with_background/163/most-basic-git-commands-with-examples.png" name="twitter:image">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://rubygarage.org/blog.rss">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ri2HytQ3MS5cLgXT9GXQqRKrnQbiwoUrwRIDyskXSSGZNXaXBjTQZLdXVtB5hLH+6gnuRkmdai7kUNGgCDGfdg==">
+
+
+<meta content="#1c0058" name="theme-color">
+<link href="https://rubygarage.org/favicon.ico" rel="icon" type="image/x-icon">
+<script src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/f(1).txt"></script><link rel="stylesheet" type="text/css" media="all" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/reset.css"></head>
+<body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WK9RHZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript" async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/insight.min.js.download"></script><script async="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gtm.js.download"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WK9RHZ');</script>
+<!-- End Google Tag Manager -->
+
+<div class="main-nav-container nav-js">
+<div class="main-nav-top">
+<a class="main-logo" href="https://rubygarage.org/">
+<div class="main-logo__icon"></div>
+<div class="main-logo__text"></div>
+</a>
+<button class="main-nav__close-btn nav-toggle-js" type="button">
+<i class="icon icon-cross d-block in-violet-500"></i>
+</button>
+</div>
+<ul class="main-nav">
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js">Services</span>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/services/web-development">Web Development</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/ruby-on-rails-development">Ruby on Rails</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/react-js-development">React</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/services/mobile-app-development">Mobile Development</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/ios-app-development">iOS</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/android-app-development">Android</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/react-native-development">React Native</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item font-700">
+<a href="https://rubygarage.org/services/web-design-company">Web Design Company</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/web-app-design-services">Web Design</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/mobile-app-design-services">Mobile Application Design</a>
+</li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item main-nav__dropdown-item--indent">
+<a href="https://rubygarage.org/services/enterprise-software-development"><span class="font-700">Enterprise</span>
+<p class="main-nav__dropdown-text">
+Check out our experience in building enterprise software: from custom development and digital transformation to mobility solutions and data management.
+</p>
+</a></li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/services/startup-product-development"><span class="font-700">Startup</span>
+<p class="main-nav__dropdown-text">
+Our client’s success stories speak better than words. Check out our approach and services for startup development.
+</p>
+</a></li>
+</ul>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js">Industries</span>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/expertise/retail-software-development"><span class="font-700">Retail</span>
+<p class="main-nav__dropdown-text">Check out services we provide for ecommerce brands and marketplaces.</p>
+</a></li>
+</ul>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js">Company</span>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="main-nav__dropdown-item main-nav__dropdown-item--indent">
+<a href="https://rubygarage.org/company/about"><span class="font-700">About</span>
+<p class="main-nav__dropdown-text">Find out what makes us one of the top software development companies in Eastern Europe.</p>
+</a></li>
+<li class="main-nav__dropdown-item main-nav__dropdown-item--indent">
+<a href="https://rubygarage.org/company/workflow"><span class="font-700">Workflow</span>
+<p class="main-nav__dropdown-text">We believe that clear and transparent workflow is a key to success. See every step of product development with us.</p>
+</a></li>
+<li class="main-nav__dropdown-item main-nav__dropdown-item--indent">
+<a href="https://rubygarage.org/company/careers"><span class="font-700">Careers</span>
+<p class="main-nav__dropdown-text">We're always in a search of top talents. Have a look at career opportunities at RubyGarage.</p>
+</a></li>
+</ul>
+<ul class="main-nav__dropdown-list dropdown-item-js">
+<li class="font-700 main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/software-engineering">Engineering</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/business-analysis-office">Business Analysis Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/project-management-office">Project Management Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/design-office">Design Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/programming-and-engineering-office">Programming and Engineering Office</a>
+</li>
+<li class="main-nav__dropdown-item">
+<a href="https://rubygarage.org/company/quality-assurance-office">Quality Assurance Office</a>
+</li>
+</ul>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--hoverable" href="https://rubygarage.org/case-studies">Case Studies</a>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--hoverable" href="https://rubygarage.org/blog">Blog</a>
+</li>
+</ul>
+<div class="main-nav-bottom">
+<a class="main-header__get-button main-button d-inline-block" aria-label="Contact us" href="https://rubygarage.org/contacts"><span class="mr-15">Get in touch</span>
+<i class="icon icon-mail-fill font-12"></i>
+</a></div>
+</div>
+
+
+<div class="article-content-page blog-page page-container">
+<div class="header-wrap-white">
+<header class="main-header main-header-js main-header--blog-page main-header--fixed main-header--slide-in">
+<div class="main-header__left">
+<a class="main-logo" href="https://rubygarage.org/">
+<div class="main-logo__icon"></div>
+<div class="main-logo__text"></div>
+</a>
+</div>
+<div class="main-header__center">
+<ul class="main-nav">
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js" data-menu-item="1">Services</span>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js" data-menu-item="2">Industries</span>
+</li>
+<li class="main-nav__item main-nav__item--dropdown">
+<span class="main-nav__item-title nav-item-js" data-menu-item="3">Company</span>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--no-indent false" href="https://rubygarage.org/case-studies">Case Studies</a>
+</li>
+<li class="main-nav__item">
+<a class="main-nav__item-title main-nav__item-title--no-indent false" href="https://rubygarage.org/blog">Blog</a>
+</li>
+</ul>
+<div class="main-nav__inner">
+<div class="main-nav__dropdown-list main-nav__dropdown-list--autoheight dropdown-item-js" data-dropdown-item="1" style="padding-left: 321px;">
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/services/web-development">Web Development</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/ruby-on-rails-development">Ruby on Rails</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/react-js-development">React</a>
+</div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/services/mobile-app-development">Mobile Development</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/ios-app-development">iOS</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/android-app-development">Android</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/react-native-development">React Native</a>
+</div>
+<div class="main-nav__dropdown-wrp main-nav__dropdown-wrp--nowrap">
+<a class="main-nav__dropdown-item font-700" href="https://rubygarage.org/services/web-design-company">Web Design Company</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/web-app-design-services">Web Design</a>
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/mobile-app-design-services">Mobile Application Design</a>
+</div>
+<div class="d-flex w-100">
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/enterprise-software-development"><span class="font-700">Enterprise</span>
+<p class="main-nav__dropdown-text">Check out our experience in building enterprise software: from custom development and digital transformation to mobility solutions and data management.</p>
+</a></div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/services/startup-product-development"><span class="font-700">Startup</span>
+<p class="main-nav__dropdown-text">Our client’s success stories speak better than words. Check out our approach and services for startup development.</p>
+</a></div>
+</div>
+</div>
+<div class="main-nav__dropdown-list dropdown-item-js" data-dropdown-item="2" style="padding-left: 321px;">
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/expertise/retail-software-development"><span class="font-700">Retail</span>
+<p class="main-nav__dropdown-text">Check out services we provide for ecommerce brands and marketplaces.</p>
+</a></div>
+</div>
+<div class="main-nav__dropdown-list main-nav__dropdown-list--autoheight dropdown-item-js" data-dropdown-item="3" style="padding-left: 321px;">
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/company/about"><span class="font-700">About</span>
+<p class="main-nav__dropdown-text">Find out what makes us one of the top software development companies in Eastern Europe.</p>
+</a></div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/company/workflow"><span class="font-700">Workflow</span>
+<p class="main-nav__dropdown-text">We believe that clear and transparent workflow is a key to success. See every step of product development with us.</p>
+</a></div>
+<div class="main-nav__dropdown-wrp">
+<a class="main-nav__dropdown-item false" href="https://rubygarage.org/company/careers"><span class="font-700">Careers</span>
+<p class="main-nav__dropdown-text">We're always in a search of top talents. Have a look at career opportunities at RubyGarage.</p>
+</a></div>
+<div class="d-flex w-100">
+<div class="main-nav__dropdown-wrp main-nav__dropdown-wrp--nowrap">
+<a class="main-nav__dropdown-item font-700 " href="https://rubygarage.org/company/software-engineering">Engineering</a>
+<a class="main-nav__dropdown-item  " href="https://rubygarage.org/company/business-analysis-office">Business Analysis Office</a>
+<a class="main-nav__dropdown-item  " href="https://rubygarage.org/company/project-management-office">Project Management Office</a>
+<a class="main-nav__dropdown-item  " href="https://rubygarage.org/company/design-office">Design Office</a>
+<a class="main-nav__dropdown-item  " href="https://rubygarage.org/company/programming-and-engineering-office">Programming and Engineering Office</a>
+<a class="main-nav__dropdown-item  " href="https://rubygarage.org/company/quality-assurance-office">Quality Assurance Office</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-header__right">
+<a class="main-header__get-button main-button d-none d-sm-inline-block" aria-label="Contact us" href="https://rubygarage.org/contacts"><span class="mr-15 hidden-xs-down">Get in touch</span>
+<span class="icon icon-mail-fill font-12"></span>
+</a><button aria-label="Toggle button" class="main-header__menu-btn nav-toggle-js d-lg-none" type="button">
+<span class="main-header__menu-btn-line"></span>
+<span class="main-header__menu-btn-line"></span>
+<span class="main-header__menu-btn-line"></span>
+</button>
+</div>
+</header>
+
+
+</div>
+
+<div class="page-content">
+<div class="blog-header blog-header--blue">
+<div class="blog-header__container container">
+<div class="row">
+<div class="col-12 hidden-md-up text-center">
+<div class="blog-header__image">
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/primary_most-basic-git-commands-with-examples.png" alt="Primary most basic git commands with examples">
+</div>
+</div>
+<div class="col-md-9 col-xl-7 offset-lg-1 text-center text-md-left">
+<div class="blog-header__image hidden-sm-down">
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/primary_most-basic-git-commands-with-examples.png" alt="Primary most basic git commands with examples">
+</div>
+<ul class="blog-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link" itemprop="item" href="https://rubygarage.org/"><span itemprop="name">
+RubyGarage
+</span>
+</a><meta content="1" itemprop="position">
+</li>
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link" itemprop="item" href="https://rubygarage.org/blog"><span itemprop="name">
+Blog
+</span>
+</a><meta content="2" itemprop="position">
+</li>
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link" itemprop="item" href="https://rubygarage.org/blog/category/tech-navigator"><span itemprop="name">
+Tech Navigator
+</span>
+</a><meta content="3" itemprop="position">
+</li>
+<li class="blog-breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a class="blog-breadcrumbs__item-link blog-breadcrumbs__item-link--disabled" itemprop="item" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples"><span itemprop="name">
+Basic Git Commands with Examples
+</span>
+<meta content="4" itemprop="position">
+</a></li>
+</ul>
+
+<h1 class="blog-header__title">
+Most Basic Git Commands with Examples
+</h1>
+<ul class="mb-20">
+<li class="blog-header__tag-list-item">
+268000 views
+</li>
+<li class="blog-header__tag-list-item">
+30 min
+</li>
+<li class="blog-header__tag-list-item">
+Apr 24, 2017
+</li>
+</ul>
+<div class="text-center text-md-left mb-10">
+<div class="blog-header__author">
+<div class="blog-header__author-img round-img round-img--sm" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/blog_author/photo/15/sviatoslav_andrushko.jpg)"></div>
+<div class="in-white hidden-sm-down">
+<p class="font-14 mb-0">
+Sviatoslav A.
+</p>
+<p class="font-12 opacity-05 mb-0">
+Copywriter
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="sub-navigation blog-nav-wrap">
+<div class="container static">
+<div class="blog-nav offset-lg-1">
+<div class="blog-nav__content">
+<div class="show-on-web">
+<ul class="d-flex flex-wrap">
+<li class="blog-tag blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog">
+All
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/public">
+Public
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/tech-navigator">
+Tech Navigator
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/insights">
+Insights
+</a>
+</li>
+<li class="blog-tag-js">
+<a class="blog-nav__content-item" href="https://rubygarage.org/blog/category/entrepreneurship">
+Entrepreneurship
+</a>
+</li>
+</ul>
+</div>
+<div class="blog-nav__mob-wrapper show-on-mobile">
+<div class="w-100 text-center">
+<div>
+<button aria-expanded="false" aria-haspopup="true" class="main-button main-button--transparent-black dropdown-toggle font-600" data-toggle="dropdown" type="button">
+All
+<i class="icon icon-triangle-down font-6 ml-10"></i>
+</button>
+<ul class="blog-nav__dropdown-menu dropdown-menu text-center bg-white" style="left: -186.984px; width: 1349px;">
+<li>
+<a class="active blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog">
+All
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/public">
+Public
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/tech-navigator">
+Tech Navigator
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/insights">
+Insights
+</a>
+</li>
+<li>
+<a class="blog-nav__main-link main-menu__link" href="https://rubygarage.org/blog/category/entrepreneurship">
+Entrepreneurship
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<button class="blog-nav__open-search" data-target="#blog_search_modal" data-toggle="modal" type="button">
+<i class="blog-nav__open-search-icon"></i>
+</button>
+<button class="main-button-link move-icon-on-hover font-14 in-blue-220 hidden-md-down blog-subscr-btn" data-target="#blog-subscribe" data-toggle="modal" type="button">
+Subscribe
+<i class="icon icon-arrow-right ml-10 font-8"></i>
+</button>
+</div>
+</div>
+</div>
+
+</div>
+<div class="blog-content-js">
+<div class="blog-content">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-1">
+      <p>"Hello, Git! I hate you already!"</p>
+
+<p>Most of us dislike Git on the first try even after running the most basic Git commands. Having a Git cheat sheet taped to our table doesn't help. Git is very complicated, as you can't learn all its concepts by just using it.</p>
+
+<p>Sadly, your life as a web developer will also be complicated without Git, and here's why.</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/life-is-a-mess-without-git.jpg" alt="Life is a mess without Git" title="Life is a Mess... Without Git">
+
+<p>The #1 problem of life without Git is that you can't adequately manage project versions. When you start a new project, you create several basic files. These basic files constitute the first version of your application. But the next day you develop the first feature, and thus you create a second version of the app. Still later, you decide to rework the first feature. Therefore, you create a third version of your app.</p>
+
+<p>When you remove or rework code, you can't restore its previous state (read: version). Without Git, you'd have to save each version of the project to a different place. Restoring a project from several places, however, isn't a viable option. How can you know which exact app version is the one you need? Git, on the other hand, can tell you what project version you're restoring.</p>
+
+<p>Here's another problem of development without Git: several developers will work on the same project, and they'll also need access to previous app versions. How can you share your code with the entire development team?</p>
+
+<blockquote>
+<span class="blockquote-quote">I can use Dropbox, Google Drive, OneDrive, a flash drive… any other drive to store my code and share it with everyone!</span>
+<div class="blockquote-author" style="font-size:24px; margin-top: 25px; font-weight: bold;">Anonymous Developer</div>
+</blockquote>
+
+<p>That's true. But again, how can you know for sure which version of code is the latest? And if your friend wants to merge your code with his version in the same file, would you like to go line by line to see whose code will be merged into which part of a file? We bet you wouldn't.</p>
+
+<p>Git easily solves both problems we've described: managing project versions and sharing code among developers. But to make Git our best friend, we should understand how Git works. To do so, we should also start using basic Git commands.</p>
+
+<h2 id="article_title_0">What's Git?</h2>
+<p>Git is a distributed version control system (DVCS). "Distributed" means that all developers within a team have a complete version of the project. A version control system is simply software that lets you effectively manage application versions. Thanks to Git, you'll be able to do the following:</p>
+<ul>
+    <li>Keep track of all files in a project</li>
+    <li>Record any changes to project files</li>
+    <li>Restore previous versions of files</li>
+    <li>Compare and analyze code</li>
+    <li>Merge code from different computers and different team members.</li>
+</ul>
+
+<p>These capabilities listed above don't tell how Git actually works, however. In all its complexity, Git works quite simply: you first need to create a local repository in your project's root directory (folder). Afterwards, Git can track project files and directories and add them to the repository. You may be thinking, "Not again! We're talking about a <i>repository</i> now?"</p>
+
+<blockquote>
+<span class="blockquote-quote">I know who did what, when, and why.</span>
+<span class="blockquote-author">Git</span>
+</blockquote>
+
+<p>A repository is just a directory (a folder) in your project's root directory. (Throughout the entire article we'll use the term directory, not folder.) You can't see repositories in your filesystem as they're hidden. But you can still see a repository in your code editor or IDE:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-hidden-repository.jpg" alt="Hidden Git repository" title="Git Local Repository">
+
+<p>What's a local repository? Let's use our imagination to understand repositories.</p>
+
+<p>If you store your stuff (code) at home (on a computer with a Git directory), you store your stuff locally. So a repository on your own computer will be called <i>local</i>. A <i>remote</i> repository is like a public storehouse located in a different building. You may have heard about remote repositories such as GitHub, BitBucket, and GitLab. They're like storehouses for code. Thanks to Git, you can copy your entire project to a remote repository while keeping it in a local repository as well.</p>
+
+<p>Why do we use local and remote repositories? Let's explain a little bit.</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/local-and-remote-git-repositories.jpg" alt="Sharing code between local and remote repositories" title="Local and Remote Repositories">
+
+<p>In the real world, you can't have <i>exactly the same stuff</i> at home and in a storehouse. If your things disappear from home (God forbid!), you'll be able to recover copies or clones (at best) from a storehouse. And you'll still lose some valuables (the original things). With GitHub or BitBucket, however, it's a different story.</p>
+
+<p>Remote storehouses (repositories like GitHub or BitBucket) store exactly the same code that you have in your local repository (on your home computer). If your code disappears from your local repository, you can restore absolutely the same code from a remote repository. A remote repository also serves as a central hub to which members of a web development team can connect to access project code.</p>
+
+<p>By now it should be clear what Git is and what repositories are. But we also need to mention two methods to run Git commands. You can use <a href="https://git-scm.com/downloads/guis" target="_blank" rel="nofollow">programs with graphical user interfaces for Git</a>. But you can also run terminal commands for Git. The terminal will be your paper on which you'll write Git commands. For the purpose of this article, we'll use the terminal (also called the command line) to run Git commands. The terminal is a basic tool that all developers should understand.</p>
+
+<p>Lastly, you need to install Git on your computer. <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" rel="nofollow">Follow these instructions</a> if you haven't done that already. Once you have Git installed, you can move on to basic Git commands with examples to make friends with Git. You can consider the following sections a Git tutorial.</p>
+
+<h2 id="article_title_1">Configuring Git</h2>
+<p>When you come to a bank for the first time and ask to store your money there, they give you a bunch of paperwork to fill out. Before you can use banking services, you have to register with the bank. Git wants you to do the same (register with Git) before you start using a repository.</p>
+
+<p>To tell Git who you are, run the following two commands:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/708c1a7c3c4308d048b3a54d0bc821eb.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993194" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-name-and-email-git-configurations-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-name-and-email-git-configurations-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-name-and-email-git-configurations-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git config --global user.name <span class="pl-s"><span class="pl-pds">"</span>King Kong<span class="pl-pds">"</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-name-and-email-git-configurations-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-name-and-email-git-configurations-sh-LC2" class="blob-code blob-code-inner js-file-line">$ git config --global user.email <span class="pl-s"><span class="pl-pds">"</span>king-kong@gmail.com<span class="pl-pds">"</span></span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/708c1a7c3c4308d048b3a54d0bc821eb/raw/228d671e5b96514044c121ee6a3896c0a61a9f61/name-and-email-git-configurations.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/708c1a7c3c4308d048b3a54d0bc821eb#file-name-and-email-git-configurations-sh">name-and-email-git-configurations.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>You've completed the first configurations! (Hopefully you've registered your real name and email. If not, you can easily change them by running the same commands once more, but using your real name and email this time.)</p>
+
+<p>Let's quickly review the syntax of Git commands. You first need to type "git", followed by a command – "config" in our example – and pass an option, which is "--global" in the code above. The option "--global" means that you set your username and email for Git <i>globally</i> on your computer. No matter how many projects with separate local repositories you create, Git will use the same username and email to mark your commits.</p>
+
+<p>There's one thing to configure before you start using Git. Since you'll see the output from many Git commands in the terminal, it's best to have some pretty colors for the output. To turn on code highlighting, just run the following command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/208e6fc13165585b81c4d4dfd80878c7.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993219" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-syntax-highlighting-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-syntax-highlighting-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-syntax-highlighting-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git config --global color.ui <span class="pl-c1">true</span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/208e6fc13165585b81c4d4dfd80878c7/raw/da6d719c1adf88bf014cac494e637402a12a4033/git-syntax-highlighting.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/208e6fc13165585b81c4d4dfd80878c7#file-git-syntax-highlighting-sh">git-syntax-highlighting.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Again, this configuration will be applied globally and it tells Git to highlight words in the terminal output to improve readability.</p>
+<p>The last basic configuration command will let you view your Git configurations. Running this command is the same as asking for a copy of your contract:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/bb76e5ef8c562bd6f0c21fd9038f13ab.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993232" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-configurations-list-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-configurations-list-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-configurations-list-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git config --list</td>
+      </tr>
+      <tr>
+        <td id="file-git-configurations-list-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-git-configurations-list-sh-LC2" class="blob-code blob-code-inner js-file-line">user.name=King Kong</td>
+      </tr>
+      <tr>
+        <td id="file-git-configurations-list-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-git-configurations-list-sh-LC3" class="blob-code blob-code-inner js-file-line">user.email=king-kong@gmail.com</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/bb76e5ef8c562bd6f0c21fd9038f13ab/raw/49a50c9e3ed72c758fb7dcc9cfbbb326cba20ab5/git-configurations-list.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/bb76e5ef8c562bd6f0c21fd9038f13ab#file-git-configurations-list-sh">git-configurations-list.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>That's enough for a start. You've got the feeling of Git by running several simple configuration commands. But you haven't actually used Git yet. Let's try some real Git, so to speak.</p>
+
+<p>We'll finish each section with a Git commands list. Here are the basic Git commands you've learned so far:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-cheatsheet-1.jpg" alt="Git cheatsheet - basic Git commands for configuring Git" title="Git Cheatsheet - Configuring Git">
+
+<h2 id="article_title_2">Starting a New Local Repository with Git</h2>
+<p>To continue with our bank metaphor, we need to explicitly ask the bank to open a new safe deposit box to store our effects (read: code). Assuming you've already created an empty directory for your project, you need to explicitly ask Git to create a safe deposit box – a repository – in that directory:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/3af243a862ce531f04bd3438ca5c0d64.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993284" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-create-new-repository-with-git-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-create-new-repository-with-git-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-create-new-repository-with-git-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git init</td>
+      </tr>
+      <tr>
+        <td id="file-create-new-repository-with-git-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-create-new-repository-with-git-sh-LC2" class="blob-code blob-code-inner js-file-line">Initialized empty Git repository <span class="pl-k">in</span> /home/dell/new-folder/.git/</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/3af243a862ce531f04bd3438ca5c0d64/raw/2dc1cf8640ec7b0067103bbe6a0a1cd65f097a2b/create-new-repository-with-git.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/3af243a862ce531f04bd3438ca5c0d64#file-create-new-repository-with-git-sh">create-new-repository-with-git.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The "init" command stands for initialize. Once you run "git init", Git will initialize a hidden directory called ".git" in the project's root directory. And you'll get a confirmation that your deposit box is ready! What's next? You might want to know the status of your box: does it store anything yet? To know the Git status, you'll need to run:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/5677484418bfbe8ad92f52b04db02ada.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993294" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-command-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-command-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-command-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git status</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/5677484418bfbe8ad92f52b04db02ada/raw/3cd78349e4f8797c4f0b47bb06d8698ecbbfe3f3/git-status-command.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/5677484418bfbe8ad92f52b04db02ada#file-git-status-command-sh">git-status-command.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>You'll run the command "git status" quite often. It's the same as calling a bank administrator to check if your things arrived or if anything has been moved to a different vault.</p>
+
+<p>For now, Git will give you the following output:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/edc535bf4e3af37650acd1c8505631cd.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993312" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-with-output-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-with-output-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-with-output-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git status</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-output-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-git-status-with-output-sh-LC2" class="blob-code blob-code-inner js-file-line">On branch master</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-output-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-git-status-with-output-sh-LC3" class="blob-code blob-code-inner js-file-line">Initial commit</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-output-sh-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-git-status-with-output-sh-LC4" class="blob-code blob-code-inner js-file-line">nothing to commit (create/copy files and use <span class="pl-s"><span class="pl-pds">"</span>git add<span class="pl-pds">"</span></span> to track)</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/edc535bf4e3af37650acd1c8505631cd/raw/eaf9b5b75573b1c9ec186035b699efa476b0bd3f/git-status-with-output.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/edc535bf4e3af37650acd1c8505631cd#file-git-status-with-output-sh">git-status-with-output.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The message above presents a few new terms, so let's clarify what they mean.</p>
+
+<h3 id="article_title_3">Git Branches</h3>
+<p>You can consider branches in Git as paths. Imagine that you explore a new territory and you mark the main path to water with poles each 10 to 15 meters. This main path is like the master branch, and the poles are like commits. We'll talk more about branches in the last section of the article. For now, it's sufficient to know that Git has a base branch called the master branch.</p>
+
+<h3 id="article_title_4">Git Commits</h3>
+<p>A commit to a repository is a snapshot of the current state of the project's root directory. Since this explanation doesn't really tell anything, we need to delineate the underlying concept.</p>
+
+<p>Let's say you're working with a bunch of papers. You've written ten texts about animals on separate sheets of paper and you want to note what texts they are and when you wrote them. You take out another sheet of paper, call it a "commit," and write on this commit paper: "I've written text #1. It's about birds. I've written text #2. It's about dogs..." Then you create a copy of each text. The last thing you do is you gather those ten copies, pin the commit paper on top of them, and lay them in a drawer.</p>
+
+<p>The next day you rewrite the original texts, then get the copies from your drawer and compare the texts. This is basically what Git does. You create files and write code in them. When you're ready, you <i>commit</i> your files to a repository: you create copies of files and lay them in a drawer (a repository). (Our inner nerd wants to specify that Git doesn't actually push copies of files to the repository; Git creates a light representation of the project files for performance benefits.)</p>
+
+<p>Each day you write that commit message and add new texts. Git creates a history of your commits, so you can trace back to the very beginning of the project development to see what files have been changed or added, who added or changed them, and when.</p>
+
+<h3 id="article_title_5">Tracking Files with Git</h3>
+<p>Now we can answer the question, "Why does Git need to track files?" Before we commit any files to a local repository, Git wants to know what those files are. Git only knows what to commit when it's tracking files.</p>
+
+<p>We've explained three basic Git concepts you need to know, but we've also moved far away from explaining Git commands. Nevertheless, it's crucial to grasp Git's basic concepts to understand how Git commands work. Now that we've explained the meaning of Git concepts, we can get back to the commands.</p>
+
+<p>Let's remind you what output you'll see after you run "git status" for the first time:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/edc535bf4e3af37650acd1c8505631cd.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993312" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-with-output-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-with-output-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-with-output-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git status</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-output-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-git-status-with-output-sh-LC2" class="blob-code blob-code-inner js-file-line">On branch master</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-output-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-git-status-with-output-sh-LC3" class="blob-code blob-code-inner js-file-line">Initial commit</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-output-sh-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-git-status-with-output-sh-LC4" class="blob-code blob-code-inner js-file-line">nothing to commit (create/copy files and use <span class="pl-s"><span class="pl-pds">"</span>git add<span class="pl-pds">"</span></span> to track)</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/edc535bf4e3af37650acd1c8505631cd/raw/eaf9b5b75573b1c9ec186035b699efa476b0bd3f/git-status-with-output.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/edc535bf4e3af37650acd1c8505631cd#file-git-status-with-output-sh">git-status-with-output.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Since there are no files in the root directory yet, Git shows that there's nothing to commit. Our safe deposit box (repository) is empty. To do anything further, we need to populate the root folder with at least one file. We've added my-new-file.txt to the root directory. Now we can move on to the next step.</p>
+
+<p>When you run "git status" once more (assuming you've added a file to the project's root directory), you'll get a different output:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/6f4fcc3d5ffe0cc1596d5a2386937c64.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993335" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-with-untracked-files-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-with-untracked-files-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-with-untracked-files-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git status</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-untracked-files-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-git-status-with-untracked-files-sh-LC2" class="blob-code blob-code-inner js-file-line">On branch master</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-untracked-files-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-git-status-with-untracked-files-sh-LC3" class="blob-code blob-code-inner js-file-line">Initial commit</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-untracked-files-sh-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-git-status-with-untracked-files-sh-LC4" class="blob-code blob-code-inner js-file-line">Untracked files:</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-untracked-files-sh-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-git-status-with-untracked-files-sh-LC5" class="blob-code blob-code-inner js-file-line">(use <span class="pl-s"><span class="pl-pds">"</span>git add &lt;file&gt;...<span class="pl-pds">"</span></span> to include <span class="pl-k">in</span> what will be committed)</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-untracked-files-sh-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-git-status-with-untracked-files-sh-LC6" class="blob-code blob-code-inner js-file-line">	my_new_file.txt</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-untracked-files-sh-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-git-status-with-untracked-files-sh-LC7" class="blob-code blob-code-inner js-file-line">nothing added to commit but untracked files present (use <span class="pl-s"><span class="pl-pds">"</span>git add<span class="pl-pds">"</span></span> to track)</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/6f4fcc3d5ffe0cc1596d5a2386937c64/raw/489f82e9dcce2a74800f9b221dfb293234d81ebe/git-status-with-untracked-files.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/6f4fcc3d5ffe0cc1596d5a2386937c64#file-git-status-with-untracked-files-sh">git-status-with-untracked-files.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Note the "Untracked files" message with the file "my_new_file.txt". Git conveniently informs us that we've added a new file to the project. But that isn't enough for Git. As Git tells us, we need to track "my_new_file.txt". In other words, we need to add "my_new_file.txt" to the staging area. The following section will uncover the basic Git commands for working with the staging area.</p>
+
+<p>Here are the basic Git commands you've learned so far:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-cheatsheet-2.jpg" alt="Git cheatsheet - basic Git commands for creating a new Git repository" title="Git Cheatsheet - Creating a Git Repository">
+
+<h2 id="article_title_6">Staging Files with Git</h2>
+<p>Before we cover simple Git commands used for staging files, we need to explain what the staging area is.</p>
+
+<p>Let's say you want to move some of your valuable effects to a lock box, but you don't know yet what things you'll put there. For now, you just gather things into a basket. You can take things out of the basket if you decide that they aren't valuable enough to store in a lock box, and you can add things to the basket as you wish. With Git, this basket is the <i>staging area</i>. When you move files to the staging area in Git, you actually <i>gather and prepare</i> files for Git before committing them to the local repository.</p>
+
+<p>To let Git track files for a commit, we need to run the following in the terminal:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/df2299a9a250c9fd2751039d7300c6c3.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993400" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-adding-files-to-the-git-staging-area" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-adding-files-to-the-git-staging-area-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-adding-files-to-the-git-staging-area-LC1" class="blob-code blob-code-inner js-file-line">$ git add my_new_file.txt</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/df2299a9a250c9fd2751039d7300c6c3/raw/3e4abcdf27249336384324b0fd70d09c190ca0b0/adding-files-to-the-git-staging-area" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/df2299a9a250c9fd2751039d7300c6c3#file-adding-files-to-the-git-staging-area">adding-files-to-the-git-staging-area</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>That's it; you've added a file to the staging area with the "add" command. Don't forget to pass a filename to this command so Git knows which file to track.</p>
+
+<p>But what has this "add" command actually done? Let's view an updated status (we promised that you'll often run "git status", didn't we?):</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/b83ffea1bc01a321696c4fd980603af5.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993422" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-with-current-output-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-with-current-output-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-with-current-output-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git status</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-git-status-with-current-output-sh-LC2" class="blob-code blob-code-inner js-file-line">On branch master</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-git-status-with-current-output-sh-LC3" class="blob-code blob-code-inner js-file-line">Initial commit</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-git-status-with-current-output-sh-LC4" class="blob-code blob-code-inner js-file-line">Changes to be committed:</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-git-status-with-current-output-sh-LC5" class="blob-code blob-code-inner js-file-line">(use <span class="pl-s"><span class="pl-pds">"</span>git rm --cached &lt;file&gt;...<span class="pl-pds">"</span></span> to unstage)</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-git-status-with-current-output-sh-LC6" class="blob-code blob-code-inner js-file-line">	new file: my_new_file.txt</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/b83ffea1bc01a321696c4fd980603af5/raw/2f0fa6d3659b722e91524b76aa499051803c2f15/git-status-with-current-output.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/b83ffea1bc01a321696c4fd980603af5#file-git-status-with-current-output-sh">git-status-with-current-output.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The status has changed! Git knows that there's a newly created file in your basket (the staging area), and is ready to commit the file. We'll get to committing files in the next section. For now, we want to talk more about the "git add" command.</p>
+
+<p>What if you create or change several files? With a basket as your staging area, you have to put things into the basket one by one. Committing files to the repository individually isn't convenient. What Git can do is provide alternatives to the "git add &lt;file-name&gt;" command.</p>
+
+<p>Let's assume you've added another three files to the root directory: my-file.ts, another-file.js, and new_file.rb. Now you want to add all of them to the staging area. Instead of adding these files separately, we can add them all together:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/9ba14cff4cf6e5a01997cd79510701ea.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993429" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-adding-multiple-files-to-staging-area-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-adding-multiple-files-to-staging-area-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-adding-multiple-files-to-staging-area-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git add my-file.ts another-file.js new_file.rb</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/9ba14cff4cf6e5a01997cd79510701ea/raw/f8d76756f01c852d0e4567ac5cb02a0e1587a841/git-adding-multiple-files-to-staging-area.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/9ba14cff4cf6e5a01997cd79510701ea#file-git-adding-multiple-files-to-staging-area-sh">git-adding-multiple-files-to-staging-area.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>All you need to do is type file names separated by spaces following the "add" command. When you run "git status" once more to see what has changed, Git will output a new message listing all the files you've added:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/f3f320a8806b8651d699f59691543af5.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993438" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-with-current-output-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-with-current-output-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-with-current-output-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git status</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-git-status-with-current-output-sh-LC2" class="blob-code blob-code-inner js-file-line">Changes to be committed:</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-git-status-with-current-output-sh-LC3" class="blob-code blob-code-inner js-file-line">(use <span class="pl-s"><span class="pl-pds">"</span>git rm --cached &lt;file&gt;...<span class="pl-pds">"</span></span> to unstage)</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-git-status-with-current-output-sh-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-git-status-with-current-output-sh-LC5" class="blob-code blob-code-inner js-file-line">	new file: another_file.js</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-git-status-with-current-output-sh-LC6" class="blob-code blob-code-inner js-file-line">	new file: my_file.ts</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-git-status-with-current-output-sh-LC7" class="blob-code blob-code-inner js-file-line">	new file: my_new_file.txt</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-git-status-with-current-output-sh-LC8" class="blob-code blob-code-inner js-file-line">	new file: new_file.rb</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/f3f320a8806b8651d699f59691543af5/raw/f982374da025afe0726a2fdfb299d091706c1094/git-status-with-current-output.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/f3f320a8806b8651d699f59691543af5#file-git-status-with-current-output-sh">git-status-with-current-output.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Adding several files to the staging area in one go is much more convenient! But hold on a second. What if the project grows enormously and you have to add more than three files? How can we add a dozen files (or dozens of files) in one go? Git accepts the challenge and offers the following solution:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/5131aeef18c9f087d7b64fbc75e80aec.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993445" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-adding-all-files-to-staging-area-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-adding-all-files-to-staging-area-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-adding-all-files-to-staging-area-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git add <span class="pl-c1">.</span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/5131aeef18c9f087d7b64fbc75e80aec/raw/955b29f4375c0daca7b675fa752e6fc56d4d33b6/adding-all-files-to-staging-area.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/5131aeef18c9f087d7b64fbc75e80aec#file-adding-all-files-to-staging-area-sh">adding-all-files-to-staging-area.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Instead of listing file names one by one, you can use a period – yes, a simple dot – to select all files under the current directory. Git will grab all new or changed files and shove them into the basket (the staging area) all at once. That's even more convenient, isn't it? But Git can do even better.</p>
+
+<p>There's a problem with the "git add ." command. Since we're currently working in the root directory, "git add ." will only add files located in the root directory. But the root directory may contain many <i>other directories</i> with files. How can we add files from those other directories plus the files in the root directory to the staging area? Git offers the command below:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/bff3042afc85354050d3770d1c97cc79.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993454" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-adding-all-files-to-staging-area-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-adding-all-files-to-staging-area-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-adding-all-files-to-staging-area-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git add --all</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/bff3042afc85354050d3770d1c97cc79/raw/5ba3ea64a8e6ebefcd09efe580493fcc0af263f7/adding-all-files-to-staging-area.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/bff3042afc85354050d3770d1c97cc79#file-adding-all-files-to-staging-area-sh">adding-all-files-to-staging-area.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The option "--all" tells Git: "Find all new and updated files everywhere throughout the project and add them to the staging area." Note that you can also use the option "-A" instead of "--all". Thanks to this simple option, "-A" or "--all", the workflow is greatly simplified.</p>
+
+<p>Remember when we told you that you can take things out of your imaginary basket? Git can also take things out of its basket by removing files from the staging area. To remove files from the staging area, use the following command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/85f0b1f609877661b51d28bd2fe9dc9e.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993461" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-removing-a-file-from-staging-area-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-removing-a-file-from-staging-area-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-removing-a-file-from-staging-area-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git rm --cached my-file.ts</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/85f0b1f609877661b51d28bd2fe9dc9e/raw/64714da0fad3f8b8a040f941f20a13b6e5edb6be/removing-a-file-from-staging-area.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/85f0b1f609877661b51d28bd2fe9dc9e#file-removing-a-file-from-staging-area-sh">removing-a-file-from-staging-area.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>In our example, we specified the command "rm", which stands for remove. The "--cached" option indicates files in the staging area. Finally, we pass a file that we want to unstage. Git will output the following message for us:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/0601a5312645b32f223164d10aa24825.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993472" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-with-current-output-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-with-current-output-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-with-current-output-sh-LC1" class="blob-code blob-code-inner js-file-line">$ rm <span class="pl-s"><span class="pl-pds">'</span>my_file.ts<span class="pl-pds">'</span></span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/0601a5312645b32f223164d10aa24825/raw/b80b33f7af5bb3cbf81f8e3e15472b30cb58cf9f/git-status-with-current-output.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/0601a5312645b32f223164d10aa24825#file-git-status-with-current-output-sh">git-status-with-current-output.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Let's run "git status" again:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/690862b3b31a4709ac825e71e120e0ce.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993483" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-git-status-with-current-output-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-git-status-with-current-output-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-git-status-with-current-output-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git status</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-git-status-with-current-output-sh-LC2" class="blob-code blob-code-inner js-file-line">Changes to be committed:</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-git-status-with-current-output-sh-LC3" class="blob-code blob-code-inner js-file-line">(use <span class="pl-s"><span class="pl-pds">"</span>git rm --cached &lt;file&gt;...<span class="pl-pds">"</span></span> to unstage)</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-git-status-with-current-output-sh-LC4" class="blob-code blob-code-inner js-file-line">	new file: another-file.js</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-git-status-with-current-output-sh-LC5" class="blob-code blob-code-inner js-file-line">	new file: my_new_file.txt</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-git-status-with-current-output-sh-LC6" class="blob-code blob-code-inner js-file-line">	new file: new_file.rb</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-git-status-with-current-output-sh-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-git-status-with-current-output-sh-LC8" class="blob-code blob-code-inner js-file-line">Untracked files:</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-git-status-with-current-output-sh-LC9" class="blob-code blob-code-inner js-file-line">(use <span class="pl-s"><span class="pl-pds">"</span>git add &lt;file&gt;...<span class="pl-pds">"</span></span> to include <span class="pl-k">in</span> what will be committed)</td>
+      </tr>
+      <tr>
+        <td id="file-git-status-with-current-output-sh-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-git-status-with-current-output-sh-LC10" class="blob-code blob-code-inner js-file-line">	my-file.ts</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/690862b3b31a4709ac825e71e120e0ce/raw/9494290544ee4ca62d4e192232345bf0c6a85659/git-status-with-current-output.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/690862b3b31a4709ac825e71e120e0ce#file-git-status-with-current-output-sh">git-status-with-current-output.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Git is no longer tracking my-file.ts. In this simple way, you can untrack files if necessary. As an alternative to "rm --cached &lt;filename&gt;", you can use the "reset" command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/121605a60699b8e7b5d88fd285e02a54.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993498" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-removing-a-file-from-staging-area-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-removing-a-file-from-staging-area-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-removing-a-file-from-staging-area-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git reset another-file.js</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/121605a60699b8e7b5d88fd285e02a54/raw/5526189d3f5c8235547f7fde4adcde9d2297cec7/removing-a-file-from-staging-area.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/121605a60699b8e7b5d88fd285e02a54#file-removing-a-file-from-staging-area-sh">removing-a-file-from-staging-area.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>You can consider "reset" as the opposite of "add".</p>
+
+<p>We've provided enough Git commands to add and remove files to and from the staging area. Now it's time to get familiar with committing files to the local repository.</p>
+
+<p>Here are the most common Git commands you've learned so far:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-cheatsheet-3.jpg" alt="Git cheatsheet - basic Git commands for working with the staging area" title="Git Cheatsheet - Working with the Staging Area">
+
+<h2 id="article_title_7">Committing Changes to Git</h2>
+<p>Let's start with a quick overview of committing to the Git repository. By now, you should have at least one file tracked by Git (we have three). As we mentioned, tracked files aren't located in the repository yet. We have to commit them: we need to carry our basket with stuff to the lock box. There are several useful Git commands to do (almost) the same: move (commit) files from the staging area (an imaginary basket) to the repository (a lock box).</p>
+
+<p>There's nothing difficult about committing to a repository. Just run the following command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/5fe112cb70be54f81606432642dd5107.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993508" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-committing-files-to-repository-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-committing-files-to-repository-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-committing-files-to-repository-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git commit -m <span class="pl-s"><span class="pl-pds">"</span>Add three files<span class="pl-pds">"</span></span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/5fe112cb70be54f81606432642dd5107/raw/cdf31c4de72e67df604ad92dca1078bb3717b5cc/committing-files-to-repository.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/5fe112cb70be54f81606432642dd5107#file-committing-files-to-repository-sh">committing-files-to-repository.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>To commit to a repository, use the "commit" command. Next, pass the "commit" command the "-m" option, which stands for "message". Lastly, type in your commit message. We wrote "Add three files" for our example, but it's recommended that you write more meaningful messages like "Add admin panel" or "Update admin panel". Note that we didn't use the past tense! A commit message must tell what your commit <i>does</i> – adds or removes files, updates app features, and so on.</p>
+
+<p>Once we've run "git commit -m 'Add three files'", we get the following output:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/40b6bce3e9ef26e3edb5b76c4eb57dcb.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993521" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-confirmation-of-committing-files-to-repository-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-LC1" class="blob-code blob-code-inner js-file-line">[master (root-commit) abfbdeb] Add three files</td>
+      </tr>
+      <tr>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-LC2" class="blob-code blob-code-inner js-file-line">3 files changed, 0 insertions(+), 0 deletions(-)</td>
+      </tr>
+      <tr>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-LC3" class="blob-code blob-code-inner js-file-line">create mode 100644 another_file.js</td>
+      </tr>
+      <tr>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-LC4" class="blob-code blob-code-inner js-file-line">create mode 100644 my_new_file.txt</td>
+      </tr>
+      <tr>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-confirmation-of-committing-files-to-repository-sh-LC5" class="blob-code blob-code-inner js-file-line">create mode 100644 new_file.rb</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/40b6bce3e9ef26e3edb5b76c4eb57dcb/raw/1e373962f0c85db0c63c0a002c68d31c2f0fed70/confirmation-of-committing-files-to-repository.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/40b6bce3e9ef26e3edb5b76c4eb57dcb#file-confirmation-of-committing-files-to-repository-sh">confirmation-of-committing-files-to-repository.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The message tells us that there have been three files added to the current branch, which in our example is the master or the main branch. The "create mode 100644" message tells us that these files are regular non-executable files. The "0 insertions(+)" and "0 deletions(-)" messages mean we haven't added any new code or removed any code from the files. We actually don't need this information; it only confirms that the commit was successful.</p>
+
+<p>So, what have we done so far? We added files to a project directory in the first section. Then we added files to the staging area, and now we've committed them. The basic Git flow looks like this:</p>
+
+<ul>
+    <li>Create a new file in a root directory or in a subdirectory, or update an existing file.</li>
+    <li>Add files to the staging area by using the "git add" command and passing necessary options.</li>
+    <li>Commit files to the local repository using the "git commit -m &lt;message&gt;" command.</li>
+    <li>Repeat.</li>
+</ul>
+
+<p>That's enough to get the idea of Git's flow. But let's get back to committing files. We should mention a great alternative to the standard "git commit -m 'Does something'" command.</p>
+
+<p>When working on a project, chances are you'll modify some files and commit them many times. Git's flow doesn't really change for adding modified files to a new commit. In other words, every time you make changes you'll need to add a modified file to the staging area and then commit. But this standard flow is tedious. And why should you have to ask Git to track a file that was tracked before?</p>
+
+<p>The question is how can we add modified files to the staging area and commit them at the same time. Git provides the following super command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/c9dc3517ecc34e468634de26e29666ef.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993538" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-adding-and-committing-files-to-repository-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-adding-and-committing-files-to-repository-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-adding-and-committing-files-to-repository-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git commit -a -m <span class="pl-s"><span class="pl-pds">"</span>Do something once more<span class="pl-pds">"</span></span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/c9dc3517ecc34e468634de26e29666ef/raw/6cb670b212c6d9f9a5582e85487f1928088874a2/adding-and-committing-files-to-repository.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/c9dc3517ecc34e468634de26e29666ef#file-adding-and-committing-files-to-repository-sh">adding-and-committing-files-to-repository.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Note the "-a" option, which stands for "add". Git will react to this command like this: "I'll just commit the files immediately. Don't forget to write a commit message, though!" As we can see, this little trick lets us avoid running two commands.</p>
+
+<p>There will be times when you'll regret committing to a repository. Let's say you've modified ten files, but committed only nine. How can you add that remaining file to the last commit? And how can you modify a file if you've already committed it? There are two ways out. First, you can undo the commit:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/64ac1f197ae079a2a406120f7b12473b.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993549" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-undo-last-commit-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-undo-last-commit-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-undo-last-commit-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git reset --soft HEAD^</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/64ac1f197ae079a2a406120f7b12473b/raw/02d3454c831e5f975790b8d792a56119b9acf343/undo-last-commit.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/64ac1f197ae079a2a406120f7b12473b#file-undo-last-commit-sh">undo-last-commit.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>As you may recall, the "reset" command is the opposite of the "add" command. This time, "reset" tells Git to undo the commit. What follows "reset" is the "--soft" option. The "--soft" option means that the commit is canceled and moved before HEAD. You can now add another file to the staging area and commit, or you can amend files and commit them.</p>
+
+<p>To understand what that "HEAD" thing represents, recall that we work in branches. Currently we're in the master branch, and HEAD <i>points</i> to this master branch. When we switch to a different branch later, HEAD will point to that different branch. HEAD is just a pointer to a branch:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/head-points-to-current-branch-in-git.jpg" alt="Moving HEAD points to branches" title="HEAD and Git">
+
+<p>What you see in the image is that each dot represents a separate commit, and the latest commit is at the top of the branch (HEAD). In the command "git reset --soft HEAD^" the last character "^" represents the last commit. We can read "git reset --soft HEAD^" as "Undo the last commit in the current branch and move HEAD back by one commit."</p>
+
+<p>Instead of resetting the HEAD and undoing the last commit, we can rectify a commit by using the "--amend" option when committing to a repository. Just add the remaining file to the staging area and then commit:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/dd153866c982583fb6ae101991558b65.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993564" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-amending-last-commit-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-amending-last-commit-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-amending-last-commit-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git add file-i-forgot-to-add.html</td>
+      </tr>
+      <tr>
+        <td id="file-amending-last-commit-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-amending-last-commit-sh-LC2" class="blob-code blob-code-inner js-file-line">$ git commit --amend -m <span class="pl-s"><span class="pl-pds">"</span>Add the remaining file<span class="pl-pds">"</span></span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/dd153866c982583fb6ae101991558b65/raw/75bb459368ea317408b60279ddaa049b5b37e282/amending-last-commit.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/dd153866c982583fb6ae101991558b65#file-amending-last-commit-sh">amending-last-commit.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The "--amend" option lets you <em>amend the last commit</em> by adding a new file (or multiple files). Using the "--amend" option, you can also overwrite the message of your last commit.</p>
+
+<p>Think of this command in this way: you took out the top stack of papers from the drawer and "amended" them by simply <i>unstapling</i> the bunch of papers, adding another paper, file-i-forgot-to-add.html, on top and rewriting the message on the "commit" paper.</p>
+
+<p>By this time, you've done some work with Git on your computer. You've created files, added them to the staging area, and committed them. But these actions only concern your local repository. When working in a team, you'll also use a <i>remote</i> repository. What are the basic Git commands to work with remote repositories? The answer is in the following section.</p>
+
+<p>As a summary, so far you've learned the following Git commands:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-cheatsheet-4.jpg" alt="Git cheatsheet - basic Git commands for committing to Git repository" title="Git Cheatsheet - Committing to a Repository">
+
+<h2 id="article_title_8">Push and Pull To and From a Remote Repository</h2>
+<p>In real development, your workflow will look like this:</p>
+<ul>
+    <li>You work on a feature and commit files to a branch (master or any other branch).</li>
+    <li>You push commits to a remote repository.</li>
+    <li>Other developers pull your commits to their computers to have the latest version of the project.</li>
+</ul>
+
+<p>You'll use several important Git commands to move (push) your code from a local repository to a remote repository and to grab (pull) your team's collective code from a remote repository.</p>
+
+<p>Git has a "remote" command to deal with remote repositories. But before we jump into an explanation of how the "remote" command works, we have to do a little bit of setup.</p>
+
+<p>First things first, you need to create a remote repository. We'll use GitHub for this section. You can create an account on GitHub and <a href="https://github.com/" target="_blank" rel="nofollow">create a new repository</a> for your project. Just start a project and give it a name. You then need to grab the HTTPS link to this new repository. The link will look similar to this – https://github.com/YourUsername/some-small-app.git – where YourUsername will be your GitHub username and "some-small-app.git" will be the name of your app.</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/creating-a-new-repository-on-github.jpg" alt="Creating a repository on GitHubg" title="Create New Repository on GitHub">
+
+<p>Now you need to bind this remote repository to your local repository:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/02b974e4d6be9d76290d7f829be0e6ea.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993575" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-adding-remote-repository-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-adding-remote-repository-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-adding-remote-repository-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git remote add origin https://github.com/YourUsername/some-small-app.git</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/02b974e4d6be9d76290d7f829be0e6ea/raw/8bfa5f42d2f19dcb7def2d08c3f7c5b371badb99/adding-remote-repository.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/02b974e4d6be9d76290d7f829be0e6ea#file-adding-remote-repository-sh">adding-remote-repository.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>We tell Git to "add" a repository. The "origin" option is the default name for the server on which your remote repository is located. Lastly, there's a link to your project on GitHub.</p>
+
+<p>Once you run the command above, Git will connect your local and remote repositories. But what does this liaison actually mean? Can you already access your code online? Unfortunately, not yet.</p>
+
+<p>All you did for now is signed papers so that the remote lock box (GitHub) can accept various items (your code) from your home drawer (local repository). To actually copy your things to a remote lock box, you need to personally carry them to it. With Git, copying your code to a remote repository looks like this:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/08a1ddb7acd291cd3cbe5958daa47e5b.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993584" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-pushing-to-remote-master-branch-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-pushing-to-remote-master-branch-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-pushing-to-remote-master-branch-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git push -u origin master</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/08a1ddb7acd291cd3cbe5958daa47e5b/raw/28736d2fcda1b716dcd618448f254ff5245628c3/pushing-to-remote-master-branch.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/08a1ddb7acd291cd3cbe5958daa47e5b#file-pushing-to-remote-master-branch-sh">pushing-to-remote-master-branch.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>It's obvious that the command "push" tells Git to push your files to a remote repository. What we also specified is the server our local repo is connected to (origin) and the branch we're pushing, which is master. There's also that strange "-u" option. What it means is that we're lazy enough not to run a long "git push -u origin master" command each time we push code to the cloud. Thanks to "-u", we can run only "git push" next time!"</p>
+
+<p>Once you've pushed changes to a remote repository, you can develop another feature and commit changes to the local repository. Then you can push all changes to the remote repository once again, but using only the "git push" command this time around. As we can see, Git tries to simplify things as much as possible.</p>
+
+<p>Is this the happy ending? Not yet. Once you push code to a remote repository, you have to enter your username and password registered with that remote repository.</p>
+
+<p>The current problem with "git push" is that you have to enter your credentials each time you push code to GitHub. That's not convenient. The root of this problem is the HTTPS link you used to connect repositories. Git offers a way out of this inconvenience, however.</p>
+
+<p>Let's get back to the page where GitHub offered a link to our project:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/grab-an-ssh-link-on-github.jpg" alt="SSH link to a GitHub project" title="Grab an SSH link">
+
+<p>As we can see, there's an SSH option that we can use instead of HTTPS. If you set up Git on your computer to work with SSH, then you won't have to enter GitHub credentials every time you push code to GitHub. You'll only need to add a remote origin with this SSH link, like this:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/46264988657d8082fdd3d4249c959151.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993597" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-adding-remote-repository-with-ssh-link-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-adding-remote-repository-with-ssh-link-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-adding-remote-repository-with-ssh-link-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git remote add origin git@github.com:YourUsername/your-app.git</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/46264988657d8082fdd3d4249c959151/raw/423b8bd0f56554b9a5c3c34680beaa4301635dab/adding-remote-repository-with-ssh-link.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/46264988657d8082fdd3d4249c959151#file-adding-remote-repository-with-ssh-link-sh">adding-remote-repository-with-ssh-link.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>As you can see, to connect repositories via SSH we only changed the link. Keep in mind that HTTPS is the default protocol used for connecting with GitHub, and <a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="nofollow">you need to manually set up SSH</a>.</p>
+
+<p>Now that you've added a remote repository, you can view the list of repositories by running the following command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/09a79dda767ba6e6e05414b5a37d12c6.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993604" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-listing-remote-repositories-in-console-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-listing-remote-repositories-in-console-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-listing-remote-repositories-in-console-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git remote -v</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/09a79dda767ba6e6e05414b5a37d12c6/raw/3939a659ec901b87a68098c1dfd89540158c3fad/listing-remote-repositories-in-console.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/09a79dda767ba6e6e05414b5a37d12c6#file-listing-remote-repositories-in-console-sh">listing-remote-repositories-in-console.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The "-v" option will list all remote repositories you've connected to. This is what we've got:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/565d0a0a0a5f9ca987cfbab6d9c0389c.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist47009871" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-list-of-remote-repositories-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-list-of-remote-repositories-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-list-of-remote-repositories-sh-LC1" class="blob-code blob-code-inner js-file-line">origin	https://github.com/YourName/some-app.git (fetch)</td>
+      </tr>
+      <tr>
+        <td id="file-list-of-remote-repositories-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-list-of-remote-repositories-sh-LC2" class="blob-code blob-code-inner js-file-line">origin	https://github.com/YourName/some-app.git (push)</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/565d0a0a0a5f9ca987cfbab6d9c0389c/raw/6e0e3bc097fb843235419842b384a79239ae85ea/list-of-remote-repositories.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/565d0a0a0a5f9ca987cfbab6d9c0389c#file-list-of-remote-repositories-sh">list-of-remote-repositories.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>So far we've talked about how to move your things to a remote lock box. Let's say your drawer with all your valuables has disappeared from your home. Now you want to get your things back from the lock box, kind of like cloning them. Git can clone an entire project from a remote repository. That's what the "clone" command does:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/6c66e3d98ea4e7dc57f8a2cff6d6a4c3.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993617" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-cloning-remote-repository-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-cloning-remote-repository-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-cloning-remote-repository-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git clone git@github.com:YourUsername/your-app.git</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/6c66e3d98ea4e7dc57f8a2cff6d6a4c3/raw/bd5340bde72e320b000139644dc65641a42a7003/cloning-remote-repository.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/6c66e3d98ea4e7dc57f8a2cff6d6a4c3#file-cloning-remote-repository-sh">cloning-remote-repository.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>"clone" is a simple command. We only need to pass it a link to the GitHub project. We've used an SSH link, but you can use the HTTPS link with the same command.</p>
+
+<p>What "git clone" does is it copies the entire project to a directory on your computer. The directory will be created automatically and will have the same project name as the remote repository.</p>
+
+<p>If you don't like the name of the repository you're cloning, just pass your preferred name to the command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/299ee02af0b9534760135ad8b964e895.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993651" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-cloning-remote-repository-and-changing-its-name-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-cloning-remote-repository-and-changing-its-name-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-cloning-remote-repository-and-changing-its-name-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git clone git@github.com:YourUsername/your-app.git this-name-is-much-better</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/299ee02af0b9534760135ad8b964e895/raw/c95b8c6d4f3dcbf22bd6914297dd771c015de9b3/cloning-remote-repository-and-changing-its-name.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/299ee02af0b9534760135ad8b964e895#file-cloning-remote-repository-and-changing-its-name-sh">cloning-remote-repository-and-changing-its-name.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>So far, you've pushed your changes from a local repository to a remote repository and cloned a remote repository. We haven't said anything about the "pull" command, though. Pushing changes to GitHub or BitBucket is great. But when other developers push their changes to a remote repository, you'll want to see their changes on your computer. That is, you'll want to <i>pull</i> their code to your local repository. To do so, run the following command:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/a18b3c36e6e87d49aba40f4bd5eaf1cc.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993658" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-pulling-from-remote-repository-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-pulling-from-remote-repository-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-pulling-from-remote-repository-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git pull</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/a18b3c36e6e87d49aba40f4bd5eaf1cc/raw/938095abbdeee5b6d0c31e40dfff7c22f3207bf8/pulling-from-remote-repository.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/a18b3c36e6e87d49aba40f4bd5eaf1cc#file-pulling-from-remote-repository-sh">pulling-from-remote-repository.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Running "git pull" is enough to update your local repository.</p>
+
+<blockquote>
+<span class="blockquote-quote">Wait, but you said I could clone a repository. Why do I have to pull something?</span>
+<span class="blockquote-author">Anonymous Developer</span>
+</blockquote>
+
+<p>That's a valid question, so let's clarify.</p>
+
+<p><i>Cloning</i> a repository is very different from <i>pulling</i> from a repository. If you clone a remote repository, Git will:</p>
+<ul>
+    <li>Download the entire project into a specified directory; and</li>
+    <li>Create a remote repository called origin and point it to the URL you pass.</li>
+</ul>
+
+<p>The last item simply means that you don't need to run "git remote add origin git@github.com:YourUsername/your-app.git" after cloning a repository. The "clone" command will add a remote origin automatically, and you can simply run "git push" from the repository.</p>
+
+<p>When you run the "pull" command, Git will:</p>
+<ul>
+    <li>Pull changes in the current branch made by other developers; and</li>
+    <li>Synchronize your local repository with the remote repository.</li>
+</ul>
+
+<p>The "pull" command doesn't create a new directory with the project name. Git will only pull updates to make sure that your the local repository is up to date.</p>
+
+<p>Basically, that's all you need to know about pushing, pulling, and cloning with Git. One set of basic Git commands is left, though. Remember how we mentioned branches in the beginning of the article? Why do we ever need branches? And what are the basic Git commands to view, add, and delete branches? Let's find out.</p>
+<p>The Git cheat sheet continues to grow:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-cheatsheet-5.jpg" alt="Git cheatsheet - basic Git commands for pushing and pulling from and to a remote repository" title="Git Cheatsheet - Pull &amp; Pull from &amp; to a Remote Repository">
+
+<h2 id="article_title_9">List of Git Commands for Working with Branches</h2>
+<p>You'll use multiple branches for your projects. Branches are, arguably, the greatest feature of Git, and they're very helpful. Thanks to branches, you can actively work on different versions of you projects simultaneously.</p>
+
+<p>The reason why we use branches lies on the surface. If you have a stable, working application, you don't want to break it when developing a new feature. Therefore, it's best to have two branches: one branch with a stable app and another one for developing features. Then again, when you complete a feature and it seems to be working, some bug may still be there. And bugs must not appear in a production-ready version. Thus, you'll want to have another branch for testing.</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-branches.jpg" alt="Branches in Git" title="Git Branches">
+
+<p>In the simplest terms, you'll use branches to store various versions of your project: a stable app, an app for testing, an app for feature development, and so on. Actually, what we've described is just one possible way (but certainly not the only way) to organize branches.</p>
+
+<p>How many branches you use and when you should create branches is subject to discussions within a web development team. Before starting a project, developers should decide how and when to create branches and then follow established rules until the project is complete.</p>
+
+<p>Managing branches in Git is simple. Let's first see our current branches:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/2346b98265da3b0dd166a5b41a69fc0a.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993667" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-listing-git-branches-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-listing-git-branches-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-listing-git-branches-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git branch</td>
+      </tr>
+      <tr>
+        <td id="file-listing-git-branches-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-listing-git-branches-sh-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span>master</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/2346b98265da3b0dd166a5b41a69fc0a/raw/f191f069c36c666b75570e3ed4ff8517dbbd5b86/listing-git-branches.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/2346b98265da3b0dd166a5b41a69fc0a#file-listing-git-branches-sh">listing-git-branches.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>That's it: one command, "branch", will ask Git to list all branches. In our app, we have only one branch – master. But an application under development is far from being complete, and we need to develop new features. Let's say we want to add a user profile feature. To create this feature, we need to create a new branch:</p>
+
+<div class="gist" data-src="https://gist.github.com/sparrow/9879616a030700e986aee57b62cc1fd8.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993689" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-creating-new-branch-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-creating-new-branch-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-creating-new-branch-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git branch user-profile</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/9879616a030700e986aee57b62cc1fd8/raw/e43c15f0e16a14faf04a1b30a00b4600fbbfd5a4/creating-new-branch.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/9879616a030700e986aee57b62cc1fd8#file-creating-new-branch-sh">creating-new-branch.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Again, it's very simple: the "branch" command creates a new branch with the name we gave it: "user-profile". Can we write code for our new feature right away? Not yet!</p>
+
+<p>Let's run the "git branch" command once more:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/c0c70e277b00896de112730ddc95bc4f.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993706" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-list-all-branches-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-list-all-branches-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-list-all-branches-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git branch</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/c0c70e277b00896de112730ddc95bc4f/raw/cdf5abc9d77f43da29ff7cd0cbf59947e58e9846/list-all-branches.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/c0c70e277b00896de112730ddc95bc4f#file-list-all-branches-sh">list-all-branches.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The output will be the following:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/a1aac50780f17b07db7f6d42e4c12a35.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993711" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-current-branches-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-current-branches-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-current-branches-sh-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span>master</td>
+      </tr>
+      <tr>
+        <td id="file-current-branches-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-current-branches-sh-LC2" class="blob-code blob-code-inner js-file-line">user-profile</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/a1aac50780f17b07db7f6d42e4c12a35/raw/f62d383bd6df4671261e94bafd5458c2baad8661/current-branches.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/a1aac50780f17b07db7f6d42e4c12a35#file-current-branches-sh">current-branches.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Note the asterisk to the left of "master." This asterisk marks the current branch you're in. In other words, if you create a branch and start changing code right away, you'll still be editing the previous branch, not the new one. After you've created a new branch to develop a feature, you need to switch to the new branch <i>before</i> you get to work on a feature.</p>
+
+<p>For switching branches in Git, you won't use a "switch" command, as you might think. Instead, you'll need to use "checkout":</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/e6fdb77a6c960ab883baaf90b2d50015.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993721" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-switching-between-branches-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-switching-between-branches-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-switching-between-branches-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git checkout user-profile</td>
+      </tr>
+      <tr>
+        <td id="file-switching-between-branches-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-switching-between-branches-sh-LC2" class="blob-code blob-code-inner js-file-line">Switched to branch <span class="pl-s"><span class="pl-pds">'</span>user-profile<span class="pl-pds">'</span></span></td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/e6fdb77a6c960ab883baaf90b2d50015/raw/9c41333b25b5ca597b933d6109e27f33be5d7207/switching-between-branches.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/e6fdb77a6c960ab883baaf90b2d50015#file-switching-between-branches-sh">switching-between-branches.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Git also notifies you that you've switched to a different branch: "Switched to branch 'user-profile'". Let's run "git branch" once more to prove that:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/16f9277a96950d3432d69627637be11d.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993731" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-switching-to-branch-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-switching-to-branch-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-switching-to-branch-sh-LC1" class="blob-code blob-code-inner js-file-line">master</td>
+      </tr>
+      <tr>
+        <td id="file-switching-to-branch-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-switching-to-branch-sh-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span>user-profile</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/16f9277a96950d3432d69627637be11d/raw/fa85aff59acf4bd61c44f9b591db20552afacabc/switching-to-branch.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/16f9277a96950d3432d69627637be11d#file-switching-to-branch-sh">switching-to-branch.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Hooray! You can now freely change any file, create and delete files, add files to the staging area, commit files, or even push files to a remote repository. Whatever you do under the user-profile branch won't affect the master branch.</p>
+
+<blockquote>
+<span class="blockquote-quote">But wait! You're saying that I can do whatever I need in a new branch and it won't change the master branch at all. But once I finish developing a feature, how can I move it from that development branch to the master? Do I need to copy-paste?</span>
+<span class="blockquote-author">Anonymous Developer</span>
+</blockquote>
+
+<p>Before we answer the questions, let's first take a look at the flow when adding new branches:</p>
+<ol>
+    <li>Create a new branch to develop a new feature using "git branch &lt;branch-name&gt;".</li>
+    <li>Switch to the new branch from the main branch using "git checkout &lt;branch-name&gt;".</li>
+    <li>Develop the new feature.</li>
+</ol>
+
+<p>You're stuck on the third step. What should you do next? The answer is simple: you need to use the "merge" command. To merge a secondary branch into the main branch (which can be a master, development, or feature branch), first switch back to the main branch. In our case, we should checkout the master branch:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/8ea5cc79cc09da6064190a990acc3eaa.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993757" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-switching-between-branches-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-switching-between-branches-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-switching-between-branches-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git checkout master</td>
+      </tr>
+      <tr>
+        <td id="file-switching-between-branches-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-switching-between-branches-sh-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span>master</td>
+      </tr>
+      <tr>
+        <td id="file-switching-between-branches-sh-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-switching-between-branches-sh-LC3" class="blob-code blob-code-inner js-file-line">user-profile</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/8ea5cc79cc09da6064190a990acc3eaa/raw/8ffb57291a12477461ece16a3f2a7a74e4d17144/switching-between-branches.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/8ea5cc79cc09da6064190a990acc3eaa#file-switching-between-branches-sh">switching-between-branches.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>The current branch is now changed to master, and we can merge the user-profile branch using the command "merge":</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/f4bc90b2bc7286ba5c66cad06b870f61.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993772" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-merging-branches-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-merging-branches-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-merging-branches-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git merge user-profile</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/f4bc90b2bc7286ba5c66cad06b870f61/raw/1ea23167ab41499909f669ea959be0bf9324a14f/merging-branches.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/f4bc90b2bc7286ba5c66cad06b870f61#file-merging-branches-sh">merging-branches.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Keep in mind that you're in the main branch and you're merging another branch into the main – not vice versa! Now that the user-profile feature is in the master branch, we don't need the user-profile branch anymore. So let's run the following command:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/be3d3a4e22feb5f9aa8ba6e493873fa3.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993788" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-deleting-branch-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-deleting-branch-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-deleting-branch-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git branch -d user-profile</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/be3d3a4e22feb5f9aa8ba6e493873fa3/raw/1ecdc594b70fcff1fa429699d99d5ccad9be0cf4/deleting-branch.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/be3d3a4e22feb5f9aa8ba6e493873fa3#file-deleting-branch-sh">deleting-branch.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>With the "-d" option, we can delete the now unnecessary "user-profile". By the way, if you try to remove the branch you're in, Git won't let you:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/52552b5962443206544a6816bb5b9a92.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993832" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-deleting-branch-error-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-deleting-branch-error-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-deleting-branch-error-sh-LC1" class="blob-code blob-code-inner js-file-line">error: Cannot delete the branch <span class="pl-s"><span class="pl-pds">'</span>user-profile<span class="pl-pds">'</span></span> which you are currently on.</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/52552b5962443206544a6816bb5b9a92/raw/566c69e3fc42af1aba7d205dadd9baf8a3b2d719/deleting-branch-error.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/52552b5962443206544a6816bb5b9a92#file-deleting-branch-error-sh">deleting-branch-error.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>Let's mention a simpler command for creating new branches than "git branch &lt;name&gt;". Given that you're in the main branch and you need to create a new branch, you can just do this:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/dd1ff028ecb686eb6cc2fad220ab7b13.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993841" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-creating-and-switching-to-new-branch-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-creating-and-switching-to-new-branch-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-creating-and-switching-to-new-branch-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git branch my-new-branch</td>
+      </tr>
+      <tr>
+        <td id="file-creating-and-switching-to-new-branch-sh-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-creating-and-switching-to-new-branch-sh-LC2" class="blob-code blob-code-inner js-file-line">$ git checkout my-new-branch</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/dd1ff028ecb686eb6cc2fad220ab7b13/raw/77b5ecda22f4f1c19c0d89a71a0f76b47f346758/creating-and-switching-to-new-branch.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/dd1ff028ecb686eb6cc2fad220ab7b13#file-creating-and-switching-to-new-branch-sh">creating-and-switching-to-new-branch.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>But instead of running two commands you can run only one:</p>
+<div class="gist" data-src="https://gist.github.com/sparrow/518e5bda785057a403d8c6a213525a2d.json"><link rel="stylesheet" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/gist-embed-a9a1cf2ca01efd362bfa52312712ae94.css"><div id="gist46993853" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-creating-and-switching-to-new-branch-in-one-command-sh" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-shell ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-creating-and-switching-to-new-branch-in-one-command-sh-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-creating-and-switching-to-new-branch-in-one-command-sh-LC1" class="blob-code blob-code-inner js-file-line">$ git checkout -b admin-panel</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/sparrow/518e5bda785057a403d8c6a213525a2d/raw/067d4b3cc75aa763432f3a0142c28032feb12071/creating-and-switching-to-new-branch-in-one-command.sh" style="float:right">view raw</a>
+        <a href="https://gist.github.com/sparrow/518e5bda785057a403d8c6a213525a2d#file-creating-and-switching-to-new-branch-in-one-command-sh">creating-and-switching-to-new-branch-in-one-command.sh</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<p>This one command will let you create a new "admin-panel" branch and switch to that branch right away. Git earns another point for improving the workflow.</p>
+
+<p>Here's an extensive list of the most used Git commands with examples:</p>
+
+<img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/git-cheatsheet-6.jpg" alt="Git cheatsheet - working in branches" title="Git Cheatsheet - Working with Branches">
+
+<h2 id="article_title_10">A Quick Recap</h2>
+<p>Git is a great tool to aid your development process.</p>
+
+<p>From the point of view of web developers, Git is a huge heap of commands. There are dozens of Git commands you should know. But for a start, it's enough to familiarize yourself with the most basic Git commands that we've provided in our tutorial so you can:</p>
+<ul>
+    <li>Register your username and email with local repositories</li>
+    <li>Initialize a local repository</li>
+    <li>Add and remove files to and from the staging area</li>
+    <li>Commit changes to the repository</li>
+    <li>Undo commits</li>
+    <li>Copy your repository to a remote server such as GitHub or BitBucket</li>
+    <li>Control the development flow by managing branches.</li>
+</ul>
+
+<p>Solid knowledge of the basic commands for the features listed above is enough for beginners. Try these basic Git commands for yourself and you'll see that the devil isn't as black as he's painted.</p>
+    </div>
+
+    <div class="col-lg-3 hidden-md-down">
+      <div class="article-inner-nav" id="article_inner_navbar">
+        <span class="article-inner-nav__heading">
+          CONTENTS
+        </span>
+        <nav>
+          <ul class="nav nav-scrollable" id="scroll-area-js" style="height: 444px; overflow-y: scroll;">
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_0">What's Git?</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_1">Configuring Git</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_2">Starting a New Local Repositor…</a>
+<ul class="nav">
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_3">Git Branches</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_4">Git Commits</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_5">Tracking Files with Git</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_6">Staging Files with Git</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_7">Committing Changes to Git</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_8">Push and Pull To and From a Re…</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_9">List of Git Commands for Worki…</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#article_title_10">A Quick Recap</a>
+</li>
+</ul>
+        </nav>
+        <div class="sctoll-nav-btn-overlay up hidden" id="scroll-up-js" style="display: none;">
+          <button class="sctoll-nav-btn" type="button">
+            <i class="icon icon-arrow-up"></i>
+          </button>
+        </div>
+        <div class="sctoll-nav-btn-overlay down hidden" id="scroll-down-js" style="display: none;">
+          <button class="sctoll-nav-btn scroll-btn" type="button">
+            <i class="icon icon-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="blog-tags">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<p class="font-14 font-300 text-uppercase opacity-06 lh-1 pt-0 mb-30">
+Tags:
+</p>
+<div class="blog-tags__list">
+<a class="chip chip--outline-light" href="https://rubygarage.org/blog/tag/tech-insights">Tech Insights</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="blog-authors">
+<p class="font-14 font-300 text-uppercase opacity-06 lh-1 pt-0 mb-30">
+Author:
+</p>
+<div class="row">
+<div class="col-sm-6">
+<div class="d-flex align-items-center mb-20">
+<div class="blog-authors__img round-img round-img--md" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/blog_author/photo/15/sviatoslav_andrushko.jpg)"></div>
+<div>
+<p class="font-17 lh-1 mb-10 pt-0">
+Sviatoslav A.
+</p>
+<p class="font-14 lh-1 opacity-05 mb-0 pt-0">Copywriter</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container text-center mb-40">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="pt-20">
+<p class="blog-social__title mb-40">
+Share article with
+</p>
+<div class="mb-10 social-counter">
+<div class="social-share-button" data-title="" data-img="" data-url="" data-desc="" data-via="">
+<a rel="nofollow " data-site="facebook" class="ssb-icon ssb-facebook" onclick="return SocialShareButton.share(this);" title="Share to Facebook" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#"></a>
+<a rel="nofollow " data-site="twitter" class="ssb-icon ssb-twitter" onclick="return SocialShareButton.share(this);" title="Share to Twitter" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#"></a>
+<a rel="nofollow " data-site="linkedin" class="ssb-icon ssb-linkedin" onclick="return SocialShareButton.share(this);" title="Share to Linkedin" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container mb-50">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<a name="comments"></a>
+<div class="comments-header">
+<span class="comments-header__title">
+Comments
+<span class="opacity-06 ls-1">
+(14)
+</span>
+</span>
+<div class="hidden-md-up">
+<button class="main-button main-button--grey main-button--sm sign-in-comments-js" data-target="#modal-sign-in" data-toggle="modal" type="button">
+to leave a comment
+</button>
+</div>
+<div class="hidden-sm-down">
+<span class="font-12 opacity-05 mr-10">
+to leave a comment
+</span>
+<button class="main-button main-button--grey main-button--sm sign-in-comments-js" data-target="#modal-sign-in" data-toggle="modal" type="button">
+Sign in
+</button>
+</div>
+</div>
+<div class="modal modal--sign-in" id="modal-sign-in">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="text-right modal-content-close-js mb-10">
+<button aria-label="Close" class="modal-close close icon icon-cross" data-dismiss="modal" type="button"></button>
+</div>
+<div class="row text-center">
+<div class="col-md-8 offset-md-2">
+<p class="font-24 font-700 mb-10">
+RubyGarage Blog
+</p>
+<p class="font-15 opacity-06 mb-30">
+Sign In to leave comments and connect with other readers
+</p>
+<div class="mb-15">
+<a class="social-button social-button--twitter" href="https://rubygarage.org/users/auth/twitter"><i class="icon icon-twitter font-13"></i>
+Sign in with Twitter
+</a></div>
+<div class="mb-15">
+<a class="social-button social-button--facebook" href="https://rubygarage.org/users/auth/facebook"><i class="icon icon-facebook font-13"></i>
+Sign in with Facebook
+</a></div>
+<div class="mb-15">
+<a class="social-button social-button--linkedin" href="https://rubygarage.org/users/auth/linkedin"><i class="icon icon-linkedin font-13"></i>
+Sign in with Linkedin
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="comments" id="comments">
+<div class="comments-item">
+<div class="comments-item__first-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/user/avatar/479/bigger_profilepic.jpeg)"></div>
+<div class="comments-item__info">
+<div class="comments-item__info-name">
+김보미
+<span class="comments-item__info-date">
+3 months ago
+</span>
+</div>
+<div class="comments-item__info-text">
+Seriously the best introductory git article that I've ever read. I finally got it. Thanks so much!
+</div>
+<a class="comments-item__reply" data-target="#modal-sign-in" data-toggle="modal">
+<i class="icon icon-reply font-14 in-grey-100 mr-10"></i>
+Reply
+</a>
+</div>
+</div>
+<div class="comments-item__second-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/blog_author/photo/51/small_Copywriter_Anastasiia.png)"></div>
+<div class="comments-item__answer-info">
+<div class="comments-item__info-name">
+Anastasia Z.
+<span class="comments-item__info-date">
+3 months ago
+</span>
+<span class="comments-item__info-reply-name">
+<i class="icon icon-reply"></i>
+김보미
+</span>
+</div>
+<div class="comments-item__info-text">
+Hi there! Thanks for your kind feedback ;)
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="comments-item">
+<div class="comments-item__first-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/user/avatar/476/bigger_profilepic.jpeg)"></div>
+<div class="comments-item__info">
+<div class="comments-item__info-name">
+Dimitrij Kowalsky
+<span class="comments-item__info-date">
+3 months ago
+</span>
+</div>
+<div class="comments-item__info-text">
+The best introduction to git I ever read! Thank you. The only thing I am missing (but it might be outside of the scope) is to see a comparison of what we have in local repository with what is in remote repository in terms of changes to a file.
+</div>
+<a class="comments-item__reply" data-target="#modal-sign-in" data-toggle="modal">
+<i class="icon icon-reply font-14 in-grey-100 mr-10"></i>
+Reply
+</a>
+</div>
+</div>
+<div class="comments-item__second-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/blog_author/photo/51/small_Copywriter_Anastasiia.png)"></div>
+<div class="comments-item__answer-info">
+<div class="comments-item__info-name">
+Anastasia Z.
+<span class="comments-item__info-date">
+3 months ago
+</span>
+<span class="comments-item__info-reply-name">
+<i class="icon icon-reply"></i>
+Dimitrij Kowalsky
+</span>
+</div>
+<div class="comments-item__info-text">
+Hi! Thanks for noticing :)
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="comments-item">
+<div class="comments-item__first-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/user/avatar/452/bigger_profilepic.jpeg)"></div>
+<div class="comments-item__info">
+<div class="comments-item__info-name">
+Robert Richard
+<span class="comments-item__info-date">
+4 months ago
+</span>
+</div>
+<div class="comments-item__info-text">
+Wonderful article. I love the way you create building blocks and explain every step in detail.
+</div>
+<a class="comments-item__reply" data-target="#modal-sign-in" data-toggle="modal">
+<i class="icon icon-reply font-14 in-grey-100 mr-10"></i>
+Reply
+</a>
+</div>
+</div>
+<div class="comments-item__second-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/blog_author/photo/17/small_oie_qsU8i8jsuO7J.png)"></div>
+<div class="comments-item__answer-info">
+<div class="comments-item__info-name">
+Maryna Z.
+<span class="comments-item__info-date">
+4 months ago
+</span>
+<span class="comments-item__info-reply-name">
+<i class="icon icon-reply"></i>
+Robert Richard
+</span>
+</div>
+<div class="comments-item__info-text">
+Hi there! Thanks for your kind feedback ;)
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="comments-item">
+<div class="comments-item__first-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/user/avatar/407/bigger_profilepic.jpeg)"></div>
+<div class="comments-item__info">
+<div class="comments-item__info-name">
+Vinita Samarasinghe
+<span class="comments-item__info-date">
+5 months ago
+</span>
+</div>
+<div class="comments-item__info-text">
+I've been looking for something like this forever. Thank you so much for writing it. Someone who finally understands that also non-nerd people also need to use Git. Fantastic!
+</div>
+<a class="comments-item__reply" data-target="#modal-sign-in" data-toggle="modal">
+<i class="icon icon-reply font-14 in-grey-100 mr-10"></i>
+Reply
+</a>
+</div>
+</div>
+<div class="comments-item__second-level">
+<div class="comments-item__author-img" style="background-image: url(https://rubygarage.s3.amazonaws.com/uploads/blog_author/photo/17/small_oie_qsU8i8jsuO7J.png)"></div>
+<div class="comments-item__answer-info">
+<div class="comments-item__info-name">
+Maryna Z.
+<span class="comments-item__info-date">
+5 months ago
+</span>
+<span class="comments-item__info-reply-name">
+<i class="icon icon-reply"></i>
+Vinita Samarasinghe
+</span>
+</div>
+<div class="comments-item__info-text">
+Thank you for your kind words, Vinita! Keep up with our blog updates for more useful information ;)
+</div>
+</div>
+</div>
+
+</div>
+
+
+</div>
+<div class="text-center">
+<div class="main-button-link font-13 font-600 in-blue-400 mb-30 more-comment-js" data-url="https://rubygarage.org/comments/more/163">
+Show All (+6)
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="hidden-xs-down">
+<div class="divider"></div>
+<div class="blog-subscr">
+<div class="container">
+<div class="row">
+<div class="col-12 mb-20">
+<span class="icon icon-launch blog-subscr__icon"></span>
+</div>
+<div class="col-12 mb-30">
+<p class="blog-subscr__title">
+<span class="font-700">Subscribe</span>
+via email and know it all first!
+</p>
+</div>
+<div class="col-12">
+<button class="main-button main-button--violet-black move-icon-on-hover mb-20" data-target="#blog-subscribe" data-toggle="modal" type="button">
+Subscribe on our news
+<span class="icon icon-arrow-right-short font-8 ml-23"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="hide-socials-js"></div>
+<div class="blog-recommended">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="blog-recommended__title">
+Recommended Articles
+</div>
+<div class="row">
+<div class="mb-20 col-md-4">
+<div class="card-bg--violet card-blog">
+<a class="card-blog__img-wrap relative pt-30" aria-label="Best Tools for Building Augmented Reality Mobile Apps" href="https://rubygarage.org/blog/best-tools-for-building-augmented-reality-mobile-apps"><div class="card-bg--violet card-blog__wrap--blackout"></div>
+<img class="card-blog__img" alt="" title="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/primary_best-tools-for-building-augmented-reality-mobile-apps.png">
+</a><div class="card-blog__wrap">
+<div class="card-blog__title">
+<a class="article-record-175" href="https://rubygarage.org/blog/best-tools-for-building-augmented-reality-mobile-apps">Best Tools for Building Augmented Reality Mobile Apps</a>
+</div>
+<div class="card-blog__tags">
+<ul class="clearfix mb-10">
+<li class="card-blog__list-item">
+<a href="https://rubygarage.org/blog/category/insights">Insights</a>
+</li>
+<li class="card-blog__list-item">
+34300 views
+</li>
+<li class="card-blog__list-item">
+11 min
+</li>
+</ul>
+<a aria-label="Best Tools for Building Augmented Reality Mobile Apps" class="card-blog__link" href="https://rubygarage.org/blog/best-tools-for-building-augmented-reality-mobile-apps">
+<i class="icon icon-arrow-right-thin"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="mb-20 col-md-4">
+<div class="card-bg--blue card-blog">
+<a class="card-blog__img-wrap relative pt-30" aria-label="Can Vue Fight for the Throne with React?" href="https://rubygarage.org/blog/vuejs-vs-react-battle"><div class="card-bg--blue card-blog__wrap--blackout"></div>
+<img class="card-blog__img" alt="" title="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/primary_vuejs-vs-react-battle.png">
+</a><div class="card-blog__wrap">
+<div class="card-blog__title">
+<a class="article-record-172" href="https://rubygarage.org/blog/vuejs-vs-react-battle">Can Vue Fight for the Throne with React?</a>
+</div>
+<div class="card-blog__tags">
+<ul class="clearfix mb-10">
+<li class="card-blog__list-item">
+<a href="https://rubygarage.org/blog/category/tech-navigator">Tech Navigator</a>
+</li>
+<li class="card-blog__list-item">
+33325 views
+</li>
+<li class="card-blog__list-item">
+14 min
+</li>
+</ul>
+<a aria-label="Can Vue Fight for the Throne with React?" class="card-blog__link" href="https://rubygarage.org/blog/vuejs-vs-react-battle">
+<i class="icon icon-arrow-right-thin"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="mb-20 col-md-4">
+<div class="card-bg--gray card-blog">
+<a class="card-blog__img-wrap relative " aria-label="How to Learn Ruby on Rails" href="https://rubygarage.org/blog/how-to-learn-ruby-on-rails"><div class="card-bg--gray card-blog__wrap--blackout"></div>
+<img class="card-blog__img" alt="" title="" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/primary_HEAD-how-to-learn-Ruby-on-Rails.png">
+</a><div class="card-blog__wrap">
+<div class="card-blog__title">
+<a class="article-record-110" href="https://rubygarage.org/blog/how-to-learn-ruby-on-rails">How to Learn Ruby on Rails</a>
+</div>
+<div class="card-blog__tags">
+<ul class="clearfix mb-10">
+<li class="card-blog__list-item">
+<a href="https://rubygarage.org/blog/category/insights">Insights</a>
+</li>
+<li class="card-blog__list-item">
+41519 views
+</li>
+<li class="card-blog__list-item">
+11 min
+</li>
+</ul>
+<a aria-label="How to Learn Ruby on Rails" class="card-blog__link" href="https://rubygarage.org/blog/how-to-learn-ruby-on-rails">
+<i class="icon icon-arrow-right-thin"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="blog-social-fixed blog-social-fixed-js blog-social-fixed--in">
+<p class="blog-social__title">
+Share
+</p>
+<div class="social-counter-fixed" data-total="..."><div class="social-counter-number">...</div>
+<div class="social-share-button" data-title="" data-img="" data-url="" data-desc="" data-via="">
+<a rel="nofollow " data-site="facebook" class="ssb-icon ssb-facebook" onclick="return SocialShareButton.share(this);" title="Share to Facebook" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#"></a>
+<a rel="nofollow " data-site="twitter" class="ssb-icon ssb-twitter" onclick="return SocialShareButton.share(this);" title="Share to Twitter" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#"></a>
+<a rel="nofollow " data-site="linkedin" class="ssb-icon ssb-linkedin" onclick="return SocialShareButton.share(this);" title="Share to Linkedin" href="https://rubygarage.org/blog/most-basic-git-commands-with-examples#"></a>
+</div>
+</div>
+</div>
+<div class="scroll-up hidden-lg-up" style="display: block;">
+<i class="icon icon-arrow-up"></i>
+</div>
+</div>
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","mainEntityOfPage":"https://rubygarage.org/blog/most-basic-git-commands-with-examples","headline":"Most Basic Git Commands with Examples","description":"To learn Git and its most basic commands, you’ll need something better than a simple Git cheat sheet. The following article breaks down Git concepts for you.","author":[{"@type":"Person","name":"Sviatoslav A."}],"publisher":{"@type":"Organization","name":"RubyGarage","logo":{"@type":"ImageObject","url":"https://rubygarage.org/assets/logo_128x128-bba6953ee698c17c234e49af2ef8cb7e555d699b4ca912e60cd133c925079ac9.png"}},"image":{"@type":"ImageObject","url":"https://rubygarage.s3.amazonaws.com/uploads/article/main_image/163/primary_most-basic-git-commands-with-examples.png","width":540},"datePublished":"2017-04-24T19:04:00.000+03:00","dateModified":"2019-06-18T11:20:12.679+03:00"}
+
+</script>
+
+</div>
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-12 col-md-10 offset-md-1">
+<div class="footer__social">
+<a aria-label="clutch" class="footer__social-link icon icon-clutch" href="https://clutch.co/profile/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="github" class="footer__social-link icon icon-github" href="https://github.com/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="twitter" class="footer__social-link icon icon-twitter" href="https://twitter.com/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="facebook" class="footer__social-link icon icon-facebook" href="https://www.facebook.com/RubyGarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="linkedin" class="footer__social-link icon icon-linkedin" href="https://www.linkedin.com/company/rubygarage" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="dribbble" class="footer__social-link icon icon-dribbble" href="https://dribbble.com/ugem" rel="noopener noreferrer" target="_blank"></a>
+<a aria-label="behance" class="footer__social-link icon icon-behance" href="https://www.behance.net/ugemdesign" rel="noopener noreferrer" target="_blank"></a>
+</div>
+<div class="divider"></div>
+</div>
+</div>
+<div class="row footer-inner" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+<div class="col-12 col-md-4 offset-md-1 col-lg-3 mb-40">
+<a href="https://rubygarage.org/">
+<img alt="RubyGarage" class="footer__logo" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/footer_logo-67b5eda42c45dec45a70e619c400ad6d10d3d77a61d66a779601c3ff6fa889f4.svg">
+</a>
+<div class="footer__contacts">
+<div class="footer__contacts-item">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" fill="#f0f0f0" r="11"></circle>
+<g fill="#d80027">
+<path d="M10.52 11H22c0-1-.13-1.95-.38-2.87h-11.1V11zM10.52 5.26h9.87a11.06 11.06 0 0 0-2.54-2.87h-7.33v2.87zM11 22c2.59 0 4.97-.9 6.85-2.4H4.15C6.03 21.1 8.41 22 11 22zM1.61 16.74H20.4c.54-.88.96-1.85 1.23-2.87H.38c.27 1.02.7 1.99 1.23 2.87z"></path>
+<path d="M5.1 1.72h1l-.93.68.35 1.1-.93-.69-.93.68.3-.95c-.82.69-1.54 1.49-2.13 2.38h.32l-.6.43-.26.47.29.88-.53-.39c-.13.28-.25.56-.36.86l.31.96h1.15l-.93.67.36 1.1-.94-.68-.55.4C.03 10.09 0 10.55 0 11h11V0C8.83 0 6.8.63 5.1 1.72zm.42 8.18l-.93-.68-.93.68L4 8.8l-.93-.67h1.15l.36-1.1.36 1.1H6.1l-.93.67.35 1.1zm-.35-4.3l.35 1.1-.93-.68-.93.68L4 5.6l-.93-.68h1.15l.36-1.1.36 1.1H6.1l-.93.68zm4.3 4.3l-.94-.68-.93.68.36-1.1-.93-.67h1.15l.35-1.1.36 1.1h1.15l-.93.67.36 1.1zM9.1 5.6l.36 1.1-.94-.68-.93.68.36-1.1-.93-.68h1.15l.35-1.1.36 1.1h1.15l-.93.68zm0-3.2l.36 1.1-.94-.69-.93.68.36-1.1-.93-.67h1.15l.35-1.1.36 1.1h1.15l-.93.68z" fill="#0052b4"></path>
+</g>
+</svg>
+<a class="footer__contacts-item-link" href="tel:+19299991970">+1 (929) 999-19-70</a>
+</div>
+<div class="footer__contacts-item">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" fill="#f0f0f0" r="11"></circle>
+<g fill="#0052b4">
+<path d="M2.27 4.3a10.96 10.96 0 0 0-1.9 3.83H6.1L2.27 4.3zM21.62 8.13c-.38-1.4-1.03-2.7-1.9-3.83L15.9 8.13h5.72zM.38 13.87c.38 1.4 1.03 2.7 1.9 3.83l3.82-3.83H.38zM17.7 2.27a10.96 10.96 0 0 0-3.83-1.9V6.1l3.83-3.83zM4.3 19.73c1.13.86 2.42 1.51 3.83 1.9V15.9L4.3 19.73zM8.13.38c-1.4.38-2.7 1.03-3.83 1.9L8.13 6.1V.38zM13.87 21.62c1.4-.38 2.7-1.03 3.83-1.9l-3.83-3.82v5.72zM15.9 13.87l3.83 3.83a10.96 10.96 0 0 0 1.9-3.83H15.9z"></path>
+</g>
+<g fill="#d80027">
+<path d="M21.9 9.57h-9.47V.09a11.11 11.11 0 0 0-2.86 0v9.48H.09a11.11 11.11 0 0 0 0 2.86h9.48v9.48a11.1 11.1 0 0 0 2.86 0v-9.48h9.48a11.1 11.1 0 0 0 0-2.86z"></path>
+<path d="M13.87 13.87l4.9 4.9c.23-.22.45-.45.65-.7l-4.2-4.2h-1.35zM8.13 13.87l-4.9 4.9c.22.23.45.45.7.65l4.2-4.2v-1.35zM8.13 8.13l-4.9-4.9c-.23.22-.45.45-.65.7l4.2 4.2h1.35zM13.87 8.13l4.9-4.9c-.22-.23-.45-.45-.7-.65l-4.2 4.2v1.35z"></path>
+</g>
+</svg>
+<a class="footer__contacts-item-link" href="tel:+442080684988">+44 (208) 068-49-88</a>
+</div>
+<div class="footer__contacts-item">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" fill="#ffda44" r="11"></circle>
+<path d="M0 11a11 11 0 0 1 22 0" fill="#338af3"></path>
+</svg>
+<a class="footer__contacts-item-link" href="tel:+380953330275">+380 (95) 333-02-75</a>
+</div>
+</div>
+<p class="footer__title">
+Featured in
+</p>
+<ul>
+<li class="mb-20">
+<img alt="Forbes Logo" width="93" height="24" srcset="https://d1hoawemncxx6w.cloudfront.net/assets/Forbes_logo-4c8d566b1cc8c80ed48de0a86d0d1a3a412d31104289fda1256db7b1c56982ee.png 1x, https://d1hoawemncxx6w.cloudfront.net/assets/Forbes_logo_2x-f4895c502c7a101eb4e72085397f5da8a040ed248e635b7272393c5a1711310b.png 2x" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/Forbes_logo-4c8d566b1cc8c80ed48de0a86d0d1a3a412d31104289fda1256db7b1c56982ee.png">
+</li>
+<li class="mb-20">
+<img alt="Inc Logo" width="56" height="19" srcset="https://d1hoawemncxx6w.cloudfront.net/assets/Inc_logo-389aa9b54072be8edd8412ab580ad2748f258bf71f3550a824ebaa876c7f6a5d.png 1x, https://d1hoawemncxx6w.cloudfront.net/assets/Inc_logo_2x-acdbf6a22f2ab17e7220d9d96d9a4604b3f215d84ee4a9ef8e385cafacdb116a.png 2x" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/Inc_logo-389aa9b54072be8edd8412ab580ad2748f258bf71f3550a824ebaa876c7f6a5d.png">
+</li>
+<li class="mb-20">
+<img alt="Apple News Logo" width="131" height="21" srcset="https://d1hoawemncxx6w.cloudfront.net/assets/AppleNews_logo-b646fbe007b65706dcb0dcefe8958cfbd0faeaa9a40a4a170f7a0b9e6c3e32f1.png 1x, https://d1hoawemncxx6w.cloudfront.net/assets/AppleNews_logo_2x-e6d47f009240ab46c0cd3f00aa753fa555c2c51e696ad3818b2d7d1cecdb9774.png 2x" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/AppleNews_logo-b646fbe007b65706dcb0dcefe8958cfbd0faeaa9a40a4a170f7a0b9e6c3e32f1.png">
+</li>
+<li class="mb-20">
+<img alt="Huff Post Hero Logo" width="133" height="16" srcset="https://d1hoawemncxx6w.cloudfront.net/assets/HuffPostHero_logo-6d380be004c2f80dc811354f9071532bd7428e29ebeea2745d1a72873bc70ae1.png 1x, https://d1hoawemncxx6w.cloudfront.net/assets/HuffPostHero_logo_2x-b0274a31dd09b50b94f38d6565c29095a58ad8a0fccf92540193f5101f3899d6.png 2x" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/HuffPostHero_logo-6d380be004c2f80dc811354f9071532bd7428e29ebeea2745d1a72873bc70ae1.png">
+</li>
+<li>
+<img alt="Hackernoon Logo" width="176" height="15" srcset="https://d1hoawemncxx6w.cloudfront.net/assets/Hackernoon_logo-5972388bef7407d50d2b092614decbd169d0c4b7b3655a88e461b7458c871845.png 1x, https://d1hoawemncxx6w.cloudfront.net/assets/Hackernoon_logo_2x-7b999d853bebe05dccee789bbfed2ce1633c24dc5edea8ca8d1c14b140687318.png 2x" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/Hackernoon_logo-5972388bef7407d50d2b092614decbd169d0c4b7b3655a88e461b7458c871845.png">
+</li>
+</ul>
+</div>
+<div class="col-6 col-md-4 col-lg-5">
+<div class="row">
+<div class="col-12 col-lg-5">
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link footer__list-item-link--large" href="https://rubygarage.org/case-studies">Case Studies</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link footer__list-item-link--large" href="https://rubygarage.org/blog">Blog</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link footer__list-item-link--large" href="https://rubygarage.org/contacts">Contacts</a>
+</li>
+</ul>
+</div>
+<div class="col-12 col-lg-6">
+<p class="footer__title">Services</p>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/web-development">Web Development</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/ruby-on-rails-development">Ruby on Rails</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/react-js-development">React</a>
+</li>
+</ul>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/mobile-app-development">Mobile Development</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/ios-app-development">iOS</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/android-app-development">Android</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/react-native-development">React Native</a>
+</li>
+</ul>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/web-design-company">Web Design Company</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/web-app-design-services">Web Design</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/mobile-app-design-services">Mobile Application Design</a>
+</li>
+</ul>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/enterprise-software-development">Enterprise</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/services/startup-product-development">Startup</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<p class="footer__title">Industries</p>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/expertise/retail-software-development">Retail</a>
+</li>
+</ul>
+<p class="footer__title">Company</p>
+<ul class="footer__list">
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/company/about">About</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/company/workflow">Workflow</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/company/careers">Careers</a>
+</li>
+<li class="footer__list-item">
+<a class="footer__list-item-link" href="https://rubygarage.org/company/software-engineering">Engineering</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row pb-20">
+<div class="col-12 col-md-10 offset-md-1">
+<div class="divider"></div>
+<div class="footer__bottom">
+<p class="footer__copyright">2011-2019 © Copyright RubyGarage. All Rights Reserved</p>
+<ul>
+<li class="footer__bottom-item">
+<a class="footer__bottom-item-link" href="https://rubygarage.org/assets">Assets</a>
+</li>
+<li class="footer__bottom-item">
+<a class="footer__bottom-item-link" href="https://rubygarage.org/privacy-policy">Privacy Policy</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<meta content="info@rubygarage.org" itemprop="email">
+<meta content="recruiting@rubygarage.org" itemprop="email">
+<meta content="+1 (929) 999-19-70" itemprop="telephone">
+<meta content="+44 (208) 068-49-88" itemprop="telephone">
+<meta content="+380 (95) 333-02-75" itemprop="telephone">
+<link href="https://clutch.co/profile/rubygarage" itemprop="sameAs">
+<link href="https://github.com/rubygarage" itemprop="sameAs">
+<link href="https://twitter.com/rubygarage" itemprop="sameAs">
+<link href="https://www.facebook.com/RubyGarage" itemprop="sameAs">
+<link href="https://www.linkedin.com/company/rubygarage" itemprop="sameAs">
+<link href="https://dribbble.com/ugem" itemprop="sameAs">
+<link href="https://www.behance.net/ugemdesign" itemprop="sameAs">
+</footer>
+
+</div>
+<div class="blog-subscribe modal fade blog-subscribe-js" id="blog-subscribe" role="dialog" tabindex="-1">
+<button class="blog-subscribe__close-btn blog-subscribe__close-btn-js" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="icon icon-cross"></span>
+</button>
+<div class="modal-dialog" role="document">
+<div class="container">
+<div class="row">
+<div class="col-10 offset-1 col-md-12 offset-md-0">
+<div class="blog-subscribe__logo-wrapper">
+<img class="blog-subscribe__logo" alt="RubyGarage" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/subscr_modal_logo-25f961e6fb02253163a007eebb90b6c77ef8686b4fa807c420304b06c7a5e6a9.svg">
+</div>
+<h2 class="blog-subscribe__heading blog-subscribe__heading-js">
+<span class="font-700">Subscribe</span>
+via email and know it all first!
+</h2>
+<div class="text-center hidden success-js">
+<h2 class="blog-subscribe__heading">
+<span class="font-700">Thanks</span>
+for your subscription!
+</h2>
+<span class="icon icon-check in-blue-220 font-20"></span>
+</div>
+</div>
+<div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+<form class="blog-subscr__form" autocomplete="off" id="new_subscriber" action="https://rubygarage.org/subscribe" accept-charset="UTF-8" data-remote="true" method="post" novalidate="novalidate"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="ri2HytQ3MS5cLgXT9GXQqRKrnQbiwoUrwRIDyskXSSGZNXaXBjTQZLdXVtB5hLH+6gnuRkmdai7kUNGgCDGfdg==" id="subscriber_input">
+<div class="blog-subscr__form-content">
+<div class="main-input blog-subscr__form-content-input">
+<div class="main-input__field-box">
+<input class="main-input__field main-input__field--grey" required="required" autocomplete="email" type="email" name="subscriber[email]" id="subscriber_email" aria-required="true">
+<label class="main-input__label">
+Your Email*
+</label>
+</div>
+<div class="main-input__hint" id="email-hint-js"></div>
+</div>
+<div class="blog-subscribe__form-content-checkbox">
+<div class="blog-subscribe__form-check-wrap">
+<label class="blog-subscribe__form-check-label">
+<input name="subscriber[subscription][technical_articles]" type="hidden" value="0"><input class="blog-subscribe__form-check blog-subscribe__form-check-js" type="checkbox" value="1" checked="checked" name="subscriber[subscription][technical_articles]" id="subscriber_subscription_technical_articles">
+<span class="blog-subscribe__form-check-style icon icon-check"></span>
+Technical articles
+</label>
+</div>
+<div class="blog-subscribe__form-check-wrap">
+<label class="blog-subscribe__form-check-label">
+<input name="subscriber[subscription][business_articles]" type="hidden" value="0"><input class="blog-subscribe__form-check blog-subscribe__form-check-js" type="checkbox" value="1" checked="checked" name="subscriber[subscription][business_articles]" id="subscriber_subscription_business_articles">
+<span class="blog-subscribe__form-check-style icon icon-check"></span>
+Business articles
+</label>
+</div>
+<div class="main-input__hint hidden static" id="options-hint-js">
+Please select at least one option
+</div>
+</div>
+<div class="text-center">
+<button name="button" type="submit" id="submit-btn-js" class="main-button main-button--violet-black move-icon-on-hover">Subscribe
+<span class="icon icon-touch ml-23"></span>
+</button></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="blog-search-modal modal fade" id="blog_search_modal" role="dialog" tabindex="-1">
+<button class="blog-search-modal__close" data-dismiss="modal" type="button">
+<span aria-hidden="true" class="icon icon-cross"></span>
+</button>
+<div class="modal-dialog" role="document">
+<div class="container">
+<form action="https://rubygarage.org/blog" class="blog-search-form" method="get">
+<div class="main-input mb-40" id="main-input-js">
+<div class="main-input__field-box">
+<input type="text" name="search" id="main-input__field-js" class="blog-search-form__input main-input__field main-input__field--grey" maxlength="255">
+<label class="main-input__label">
+Search for...
+</label>
+<i class="icon icon-cross in-grey-300 blog-search-form__clear-btn hidden" id="clear-btn-js"></i>
+</div>
+<div class="main-input__hint" id="main-input__hint-js">
+Please fill in the search field
+</div>
+</div>
+<button class="main-button main-button--violet-black min-210 mx-auto d-block" id="main-button-js">
+Search
+</button>
+</form>
+</div>
+</div>
+</div>
+
+
+<script src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/application-b48b8af1ff97b28c018890cebc73ad0f3db5507fd98cf73ac334b6304ce099d3.js.download" cache="true" recursive="true" async="async"></script>
+
+<script>
+  var loadDeferredStyles=function(){var addStylesNode=document.getElementById("deferred-styles");var replacement=document.createElement("div");replacement.innerHTML=addStylesNode.textContent;document.body.appendChild(replacement);addStylesNode.parentElement.removeChild(addStylesNode)};var raf=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;if(raf)raf(function(){window.setTimeout(loadDeferredStyles,0)});else window.addEventListener('load',loadDeferredStyles)
+</script>
+<script>
+  _linkedin_partner_id = "995377";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script>
+  (function(){var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img alt='' height='1' src='https://dc.ads.linkedin.com/collect/?pid=995377&amp;fmt=gif' style='display:none;' width='1'>
+</noscript>
+
+
+<div>
+<link rel="stylesheet" media="all" href="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/technology_icons-f6db56b1bca4e1dddd6efd82f068ad8f7ed9213b7dc59ca078045dc33aa5b27c.css" recursive="true" cache="true" async="async">
+</div><script type="text/javascript" id="">window.__lo_site_id=92607;(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://d10lpsik1i8c69.cloudfront.net/w.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+
+<script type="text/javascript" id="">!function(d,e,f,a,b,c){d.qp||(a=d.qp=function(){a.qp?a.qp.apply(a,arguments):a.queue.push(arguments)},a.queue=[],b=document.createElement(e),b.async=!0,b.src=f,c=document.getElementsByTagName(e)[0],c.parentNode.insertBefore(b,c))}(window,"script","https://a.quora.com/qevents.js");qp("init","b3b6a469a5e14134b3618402b7627c87");qp("track","ViewContent");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/b3b6a469a5e14134b3618402b7627c87/pixel?tag=ViewContent&amp;noscript=1"></noscript>
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","328927571074126");fbq("set","agent","tmgoogletagmanager","328927571074126");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=328927571074126&amp;ev=PageView&amp;noscript=1"></noscript>
+<iframe id="lo-cs-frame" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/saved_resource.html" aria-hidden="true" title="Lucky Orange" __idm_frm__="1233" style="display: none !important;"></iframe><script src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/saved_resource" type="text/javascript"></script><div id="LoAvailableBtn" style="padding: 10px; height: auto; position: fixed; bottom: 0px; right: 20px; z-index: 9999; background-color: rgba(0, 0, 0, 0.97); color: rgb(255, 255, 255); direction: ltr; font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 140%; box-shadow: rgb(0, 0, 0) 0px 0px 5px; border-top: 2px solid rgb(255, 255, 255); border-right: 2px solid rgb(255, 255, 255); border-left: 2px solid rgb(255, 255, 255); border-image: initial; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom: none; cursor: pointer; display: none; margin-bottom: 0px; opacity: 0;">Live Chat is Online&nbsp; <img id="lo_green_blinker" width="16" height="16" style="width:16px; height:16px; border:none; padding:0; margin:0; margin-left:3px;" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/blink_green.png" align="right" alt=""></div><div id="LoChatMinimizedButton" style="padding:10px; height:auto; position:fixed;bottom:0px; right:20px;  z-index:9999; background-color: rgba(0,0,0,0.97); color: #ffffff; direction: ltr; font-weight:bold; font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:140%;;  -box-shadow: 0px 0px 5px #000; box-shadow: 0px 0px 5px #000; -webkit-box-shadow: 0px 0px 5px #000; border:2px solid #fff;  border-bottom:none; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom:none; ;cursor: pointer; ;max-width: 250; display: none;;margin-bottom:0px">Chatting<div class="lo-badge" style="display: none; background-color: red; border-radius: 50%; box-shadow: black 0px 0px 5px; color: white; height: 25px; line-height: 25px; position: absolute; text-align: center; width: 25px; right: 57px; bottom: 23px;">0</div></div><div id="lo_chat_box" style="transition: cubic-bezier(0, 1, 0.5, 1) .35s; border:2px solid white; width:350px; max-width:350px; border-bottom:none; display:none; bottom:-1000px; opacity:0;  position:fixed; bottom:-1000px; ; margin-bottom: 0px ;right:20px;  z-index:999999;   background-color: #000000; background-color: rgba(49,49,49,0.97); color: #ffffff; direction: ltr; font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:130%; color: #ffffff; -box-shadow: 0px 0px 5px rgba(0,0,0,0.5); box-shadow: 0px 0px 5px  rgba(0,0,0,0.5); -webkit-box-shadow: 0px 0px 5px  rgba(0,0,0,0.5);;-webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; "><div onclick="LO.min_chat();" tabindex="0" id="lo_chat_top" style="color:#ffffff; background-color: #6d6d6d; background-color: rgba(64,64,64,0.97); cursor:pointer; font-weight:bold; font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:13px; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; "><div style="float:right; margin-top:10px; margin-right:10px; position:absolute; right:0;" id="lo_chat_min_box"><div style="cursor: pointer; float:right; margin-left:10px; opacity:0.6; font-size:1empx; font-weight:bold;" onclick="LO.end_chat();" tabindex="0" id="lo_chat_end">×</div><div style="cursor: pointer; float:right; opacity:0.6; font-size:1empx; font-weight:bold;" id="lo_chat_min">–</div><div style="clear:both"></div></div><div id="lo_operator">undefined</div><div style="clear:both"></div><div style="height:0px; width:100%; border-top:1px solid #000000;border-bottom:1px solid #4f4f4f"></div></div><div id="lo_chat_log" style="height:225px; max-height: 30vh; font-size:13px; margin-top:10px; line-height: 120%; padding:10px; overflow-y:auto; margin-bottom:10px;font-family:inherit;font-size:inherit;"></div><form action="https://rubygarage.org/blog/most-basic-git-commands-with-examples" onsubmit="LO.submit_chat(); return false;"><div id="lo_chat_input" style="position:relative; width: 100%; "><div style="height:0px; margin-bottom:0px; margin-top:0px; width:100%; border-top:1px solid #000000;border-bottom:1px solid #4f4f4f"></div><div style="padding:10px;"><label for="lo_chat_textarea" style="display:none">Chat Input Box</label><textarea id="lo_chat_textarea" disabled="disabled" rows="2" style="color: black; background-color: rgb(255, 255, 255); border-radius: 5px; padding: 7px; height: auto; width: 100%; font-family: sans-serif; text-transform: none; resize: none;" dir="null" data-last-scroll-height="0"></textarea></div><div id="lo_chat_sound_holder" style="position:absolute; right:0px; top:-25px; width:100%;"><div style="cursor: pointer; float:right; opacity:0.6; padding-right:10px; height:16px;" id="lo_chat_sound"><img alt="Click to mute chat sounds" src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/sound-on-white.png"></div><div id="lo_chat_status" style="padding-left:10px; font-size:11px; color:#6d6d6d"></div><div style="clear:both;"></div></div></div></form><div id="lo_chat_submit_btn" style="display:none; padding:10px; padding-top:0px;"><button onclick="LO.submit_chat();" type="button" style="width:100%; box-sizing: border-box; font-size: 12px;  letter-spacing:initial; text-transform:none; line-height: 1.3333333;  color: #fff;  background-color: #FFFFFF;  display: inline-block;  padding: 6px 12px;   font-weight: bold;  line-height: 1.42857143;  text-align: center;  white-space: nowrap;  vertical-align: middle;  -ms-touch-action:manipulation;  touch-action: manipulation;  cursor: pointer; outline:none; -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none; user-select: none;  background-image: none;  background: #FFFFFF;  background-image: -webkit-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: -moz-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: -ms-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: -o-linear-gradient(top, #FFFFFF, #AAAAAA);  background-image: linear-gradient(to bottom, #FFFFFF, #AAAAAA); -webkit-border-radius: 5;  -moz-border-radius: 5;  border-color: #868686; border-radius: 5px;  font-family: Arial; text-shadow:0px 1px 1px #FFFFFF;  color: #000000; border-width:1px; font-weight:bold; ; padding: 10px 15px 10px 15px;  text-decoration: none; min-height: 40px;  text-align: center;">Chat</button></div><div id="lo_poweredBy" style="text-align:right; margin-bottom:10px;  font-size:10px; width:100%; line-height:16px; color: #868686;">Powered by <img src="./Basic Git Commands With Examples _git add . or git add -A_ [Git Cheat Sheet]_files/logo-light.png" align="absmiddle" title="Lucky Orange Chat Logo" alt="Lucky Orange Chat Logo" onclick="LO.click_brand(event, &#39;chat&#39;);" style="cursor: pointer; height: 12px; width:auto; margin-right:10px; display: inline-block;" border="0"></div></div></body></html>
